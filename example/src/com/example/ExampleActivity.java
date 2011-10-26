@@ -7,8 +7,9 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
 
-import com.appbrain.ads.AdUtil;
-import com.appbrain.ads.AppBrainActivity;
+import com.appbrain.AdService;
+import com.appbrain.AppBrain;
+import com.appbrain.RemoteSettings;
 
 public class ExampleActivity extends Activity {
     /** Called when the activity is first created. */
@@ -16,19 +17,19 @@ public class ExampleActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        AdUtil.init(this);
+        AppBrain.init(this);
         setContentView(R.layout.main);
 
-        String welcomeMessage = AdUtil.get().getValues().get("welcome_message", "Hello");
+        RemoteSettings settings = AppBrain.getRemoteSettings();
+        String welcomeMessage = settings.get("welcome_message", "Hello");
         Toast.makeText(this, welcomeMessage, Toast.LENGTH_LONG).show();
+        final AdService ads = AppBrain.getAdService();
 
-        AppBrainActivity.start(this, "interstitial");
-        
         findViewById(R.id.show_interstitial).setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                if (!AdUtil.get().maybeShowInterstitial(ExampleActivity.this)) {
+                if (!ads.maybeShowInterstitial(ExampleActivity.this)) {
                     Toast.makeText(ExampleActivity.this,
                         "not showing, since it was shown already recently", Toast.LENGTH_LONG).show();
                 }
@@ -39,7 +40,7 @@ public class ExampleActivity extends Activity {
 
             @Override
             public void onClick(View v) {
-                AdUtil.get().showOfferWall(ExampleActivity.this);
+                ads.showOfferWall(ExampleActivity.this);
             }
         });
 
@@ -47,7 +48,7 @@ public class ExampleActivity extends Activity {
 
             @Override
             public void onClick(View v) {
-                AdUtil.get().showDialog(ExampleActivity.this, "hallo", "bla", "ok", new Runnable() {
+                ads.showDialog(ExampleActivity.this, "hallo", "bla", "ok", new Runnable() {
 
                     @Override
                     public void run() {
@@ -61,7 +62,7 @@ public class ExampleActivity extends Activity {
 
     // @Override
     public void onBackPressed() {
-        AdUtil.get().maybeShowInterstitial(this);
+        AppBrain.getAdService().maybeShowInterstitial(this);
         finish();
     }
 

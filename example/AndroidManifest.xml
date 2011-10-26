@@ -21,7 +21,7 @@
         
 		<!-- AppBrain SDK -->
 		<activity android:configChanges="keyboard|keyboardHidden|orientation" 
-		    android:name="com.appbrain.ads.AppBrainActivity" />
+		    android:name="com.appbrain.AppBrainActivity" />
 		<receiver android:exported="true" android:name="com.appbrain.ads.ReferrerReceiver" >
 		    <intent-filter>
 		        <action android:name="com.android.vending.INSTALL_REFERRER" />
