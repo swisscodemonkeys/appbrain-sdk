@@ -1,0 +1,7 @@
+*/bin/*
+*/gen/*
+R.java
+*.pyc
+*.class
+*~
+*.swp
