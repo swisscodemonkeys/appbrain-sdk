@@ -22,12 +22,12 @@
 		<!-- AppBrain SDK -->
 		<activity android:configChanges="keyboard|keyboardHidden|orientation" 
 		    android:name="com.appbrain.AppBrainActivity" />
-		<receiver android:exported="true" android:name="com.appbrain.ads.ReferrerReceiver" >
+		<receiver android:exported="true" android:name="com.appbrain.ReferrerReceiver" >
 		    <intent-filter>
 		        <action android:name="com.android.vending.INSTALL_REFERRER" />
 		    </intent-filter>
 		</receiver>
-		<service android:name="com.appbrain.ads.SendService" />
+		<service android:name="com.appbrain.SendService" />
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />

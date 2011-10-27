@@ -20,10 +20,10 @@ public class ExampleActivity extends Activity {
         AppBrain.init(this);
         setContentView(R.layout.main);
 
-        RemoteSettings settings = AppBrain.getRemoteSettings();
+        RemoteSettings settings = AppBrain.getSettings();
         String welcomeMessage = settings.get("welcome_message", "Hello");
         Toast.makeText(this, welcomeMessage, Toast.LENGTH_LONG).show();
-        final AdService ads = AppBrain.getAdService();
+        final AdService ads = AppBrain.getAds();
 
         findViewById(R.id.show_interstitial).setOnClickListener(new OnClickListener() {
 
@@ -62,7 +62,7 @@ public class ExampleActivity extends Activity {
 
     // @Override
     public void onBackPressed() {
-        AppBrain.getAdService().maybeShowInterstitial(this);
+        AppBrain.getAds().maybeShowInterstitial(this);
         finish();
     }
 
