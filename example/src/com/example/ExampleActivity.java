@@ -2,6 +2,7 @@ package com.example;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -20,9 +21,16 @@ public class ExampleActivity extends Activity {
         AppBrain.init(this);
         setContentView(R.layout.main);
 
-        RemoteSettings settings = AppBrain.getSettings();
-        String welcomeMessage = settings.get("welcome_message", "Hello");
-        Toast.makeText(this, welcomeMessage, Toast.LENGTH_LONG).show();
+        final RemoteSettings settings = AppBrain.getSettings();
+
+        new Handler().postDelayed(new Runnable() {
+            public void run() {
+                String welcomeMessage = settings.get("welcome_message",
+                    "Hello (this comes from the app)");
+                Toast.makeText(ExampleActivity.this, welcomeMessage, Toast.LENGTH_LONG).show();
+            }
+        }, 2500);
+
         final AdService ads = AppBrain.getAds();
 
         findViewById(R.id.show_interstitial).setOnClickListener(new OnClickListener() {

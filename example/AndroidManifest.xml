@@ -27,7 +27,7 @@
 		        <action android:name="com.android.vending.INSTALL_REFERRER" />
 		    </intent-filter>
 		</receiver>
-		<service android:name="com.appbrain.SendService" />
+		<service android:name="com.appbrain.AppBrainService" />
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />
