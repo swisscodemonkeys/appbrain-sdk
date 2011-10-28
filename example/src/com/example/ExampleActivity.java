@@ -6,11 +6,13 @@ import android.os.Handler;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.appbrain.AdService;
 import com.appbrain.AppBrain;
 import com.appbrain.RemoteSettings;
+import com.example.fun.CanvasDemo;
 
 public class ExampleActivity extends Activity {
     /** Called when the activity is first created. */
@@ -24,6 +26,7 @@ public class ExampleActivity extends Activity {
         final RemoteSettings settings = AppBrain.getSettings();
 
         new Handler().postDelayed(new Runnable() {
+            @Override
             public void run() {
                 String welcomeMessage = settings.get("welcome_message",
                     "Hello (this comes from the app)");
@@ -65,6 +68,8 @@ public class ExampleActivity extends Activity {
                 });
             }
         });
+
+        ((ViewGroup)findViewById(R.id.layout)).addView(new CanvasDemo(this));
 
     }
 
