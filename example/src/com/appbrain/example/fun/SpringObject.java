@@ -1,4 +1,4 @@
-package com.example.fun;
+package com.appbrain.example.fun;
 
 public class SpringObject {
     public static final float springStrength = 0.1f;
