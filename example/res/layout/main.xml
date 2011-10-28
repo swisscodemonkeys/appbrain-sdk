@@ -3,10 +3,10 @@
 	android:layout_width="fill_parent" android:layout_height="fill_parent"
 	android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/layout">
 
-    <com.example.fun.LogoView
+    <com.appbrain.example.fun.LogoView
         android:layout_width="fill_parent"
         android:layout_height="150dip" >
-    </com.example.fun.LogoView>
+    </com.appbrain.example.fun.LogoView>
 
 
 	<Button android:id="@+id/show_popup" android:layout_width="200dp" android:layout_marginTop="40dp"
