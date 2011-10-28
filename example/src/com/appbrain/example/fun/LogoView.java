@@ -1,4 +1,4 @@
-package com.example.fun;
+package com.appbrain.example.fun;
 
 import android.content.Context;
 import android.graphics.Canvas;

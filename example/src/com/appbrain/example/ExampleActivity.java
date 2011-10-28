@@ -1,18 +1,16 @@
-package com.example;
+package com.appbrain.example;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.KeyEvent;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
 
 import com.appbrain.AdService;
 import com.appbrain.AppBrain;
 import com.appbrain.RemoteSettings;
-import com.example.fun.LogoView;
 
 public class ExampleActivity extends Activity {
 

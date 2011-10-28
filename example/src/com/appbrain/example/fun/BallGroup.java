@@ -1,4 +1,4 @@
-package com.example.fun;
+package com.appbrain.example.fun;
 
 import java.util.ArrayList;
 import java.util.List;

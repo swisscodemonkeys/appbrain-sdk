@@ -1,4 +1,4 @@
-package com.example;
+package com.appbrain.example;
 
 import android.app.Application;
 

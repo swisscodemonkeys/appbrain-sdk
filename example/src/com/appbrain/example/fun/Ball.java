@@ -1,4 +1,4 @@
-package com.example.fun;
+package com.appbrain.example.fun;
 
 import android.graphics.Canvas;
 import android.graphics.Color;
