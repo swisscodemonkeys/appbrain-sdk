@@ -5,17 +5,17 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.KeyEvent;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.view.View.OnClickListener;
 import android.widget.Toast;
 
 import com.appbrain.AdService;
 import com.appbrain.AppBrain;
 import com.appbrain.RemoteSettings;
-import com.example.fun.CanvasDemo;
+import com.example.fun.LogoView;
 
 public class ExampleActivity extends Activity {
-    /** Called when the activity is first created. */
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,14 +28,16 @@ public class ExampleActivity extends Activity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
+                // fetch the welcome message from the remote settings
                 String welcomeMessage = settings.get("welcome_message",
                     "Hello (this comes from the app)");
+                // show as toast
                 Toast.makeText(ExampleActivity.this, welcomeMessage, Toast.LENGTH_LONG).show();
             }
         }, 2500);
 
+        
         final AdService ads = AppBrain.getAds();
-
         findViewById(R.id.show_interstitial).setOnClickListener(new OnClickListener() {
 
             @Override
@@ -55,21 +57,20 @@ public class ExampleActivity extends Activity {
             }
         });
 
+        
         findViewById(R.id.show_popup).setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                ads.showDialog(ExampleActivity.this, "hallo", "bla", "ok", new Runnable() {
+                ads.showDialog(ExampleActivity.this, "Hello", "This is an example", "Ok", new Runnable() {
 
                     @Override
                     public void run() {
-                        Toast.makeText(ExampleActivity.this, "Ok", Toast.LENGTH_LONG).show();
+                        Toast.makeText(ExampleActivity.this, "You selected 'Ok'", Toast.LENGTH_LONG).show();
                     }
                 });
             }
         });
-
-        ((ViewGroup)findViewById(R.id.layout)).addView(new CanvasDemo(this));
 
     }
 

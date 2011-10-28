@@ -11,7 +11,7 @@ public class SpringObject {
         this.goal = new Vector(start);
     }
 
-    Vector d = new Vector();
+    private Vector d = new Vector();
 
     public void update() {
         Vector.sub(goal, pos, d);
