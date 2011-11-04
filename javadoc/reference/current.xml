@@ -112,6 +112,19 @@
 <parameter name="context" type="android.content.Context">
 </parameter>
 </method>
+<method name="initApp"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+</method>
 </class>
 <class name="ReferrerReceiver"
  extends="android.content.BroadcastReceiver"

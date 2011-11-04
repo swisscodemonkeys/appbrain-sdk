@@ -401,6 +401,24 @@ Summary:
   </td></tr>
 
 
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../com/appbrain/AppBrain.html#initApp(android.content.Context)">initApp</a></span>(Context context)</nobr>
+        
+        <div class="jd-descrdiv">Initialize the AppBrain AppLift SDK.</div>
+  
+  </td></tr>
+
+
 
 </table>
 
@@ -729,14 +747,56 @@ From class
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Initialize the AppBrain AppLift SDK.</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Initialize the AppBrain AppLift SDK. This method is best called in the onCreate() of your main Activity.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
           <th>context</td>
-          <td>The Activity or Application context. It is safe to pass any kind of context
-            here, the SDK will only save context.getApplicationContext().
+          <td>The Activity context.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="initApp(android.content.Context)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">initApp</span>
+      <span class="normal">(Context context)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Initialize the AppBrain AppLift SDK. This method is especially meant for your Application onCreate.
+ Because it's not called from an Activity, the analytics will not count this user as active in your app
+ (because the Application can be started because of a broadcast receiver or service for instance.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>context</td>
+          <td>The context of the Android app.
 </td>
         </tr>
       </table>
