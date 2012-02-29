@@ -11,10 +11,14 @@
 
 	<Button android:id="@+id/show_popup" android:layout_width="200dp" android:layout_marginTop="40dp"
 		android:layout_height="wrap_content" android:text="Show Dialog" />
-
-	<Button android:id="@+id/show_interstitial"
+	
+	<Button android:id="@+id/maybe_show_interstitial"
 		android:layout_width="200dp" android:layout_height="wrap_content"
 		android:text="Maybe Show Interstitial" />
+	
+	<Button android:id="@+id/show_interstitial"
+		android:layout_width="200dp" android:layout_height="wrap_content"
+		android:text="Show Interstitial" />	
 
 	<Button android:id="@+id/show_offerwall" android:layout_width="200dp"
 		android:layout_height="wrap_content" android:text="Show Offerwall" />

@@ -55,6 +55,19 @@
 <parameter name="runnable" type="java.lang.Runnable">
 </parameter>
 </method>
+<method name="showInterstitial"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="activity" type="android.app.Activity">
+</parameter>
+</method>
 <method name="showOfferWall"
  return="void"
  abstract="true"

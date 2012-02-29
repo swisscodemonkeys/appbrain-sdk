@@ -36,7 +36,7 @@ public class ExampleActivity extends Activity {
 
         
         final AdService ads = AppBrain.getAds();
-        findViewById(R.id.show_interstitial).setOnClickListener(new OnClickListener() {
+        findViewById(R.id.maybe_show_interstitial).setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -46,6 +46,17 @@ public class ExampleActivity extends Activity {
                 }
             }
         });
+        
+        findViewById(R.id.show_interstitial).setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (!ads.showInterstitial(ExampleActivity.this)) {
+                    Toast.makeText(ExampleActivity.this,
+                        "Not showing, no internet connection?", Toast.LENGTH_LONG).show();
+                }
+            }
+        });        
 
         findViewById(R.id.show_offerwall).setOnClickListener(new OnClickListener() {
 

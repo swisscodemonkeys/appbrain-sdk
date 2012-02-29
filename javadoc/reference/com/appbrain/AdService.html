@@ -307,7 +307,8 @@
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../com/appbrain/AdService.html#maybeShowInterstitial(android.app.Activity)">maybeShowInterstitial</a></span>(Activity activity)</nobr>
         
-        <div class="jd-descrdiv">Shows an interstitial activity sometimes.</div>
+        <div class="jd-descrdiv">Shows an interstitial activity sometimes (at most once per 4 days by default, and only when
+ there is an internet connection).</div>
   
   </td></tr>
 
@@ -351,6 +352,24 @@
 
 	 
     <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            boolean</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../com/appbrain/AdService.html#showInterstitial(android.app.Activity)">showInterstitial</a></span>(Activity activity)</nobr>
+        
+        <div class="jd-descrdiv">Shows the interstitial (if there is an internet connection).</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             abstract
             
@@ -440,7 +459,8 @@
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Shows an interstitial activity sometimes.</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Shows an interstitial activity sometimes (at most once per 4 days by default, and only when
+ there is an internet connection).</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
       <ul class="nolist"><li>true if the interstitial was shown
@@ -547,6 +567,42 @@
 </div>
 
 
+<A NAME="showInterstitial(android.app.Activity)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        boolean
+      </span>
+      <span class="sympad">showInterstitial</span>
+      <span class="normal">(Activity activity)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Shows the interstitial (if there is an internet connection).</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>true if the interstitial was shown
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
 <A NAME="showOfferWall(android.content.Context)"></A>
 
 <div class="jd-details api apilevel-"> 
@@ -572,7 +628,10 @@
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Shows the offer wall with the list of promoted apps.</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Shows the offer wall with the list of promoted apps.
+ You need to request explicit approval to use this method through contact@appbrain.com
+ otherwise it won't generate any revenue for you. See http://www.appbrain.com/info/sdk
+ for more information.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
