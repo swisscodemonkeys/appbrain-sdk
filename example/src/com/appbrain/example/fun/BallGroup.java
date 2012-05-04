@@ -8,6 +8,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Bitmap.Config;
+import android.graphics.Paint.Align;
 
 public class BallGroup {
     final int width;
@@ -20,7 +21,7 @@ public class BallGroup {
         this.height = height;
         balls = new ArrayList<Ball>(0);
 
-        createText(balls, "AppBrain");
+        createText(balls, "AppLift");
 
     }
 
@@ -33,17 +34,20 @@ public class BallGroup {
         Canvas canvas = new Canvas(bitmap);
         Paint paint = new Paint();
         paint.setColor(Color.WHITE);
-        paint.setTextSize(70);
+        paint.setTextSize((int) (h * 0.5));
         paint.setFakeBoldText(true);
         paint.setAntiAlias(true);
+        paint.setTextAlign(Paint.Align.CENTER);
         bitmap.eraseColor(Color.BLACK);
-        canvas.drawText(text, 20, 90, paint);
+        canvas.drawText(text, w / 2, (int) (h * 0.6), paint);
 
         int pix[] = new int[w * h];
         bitmap.getPixels(pix, 0, w, 0, 0, w, h);
 
-        float s = 1.5f;
+        float s = 1.2f;
         float[] hsv = new float[3];
+        
+        int midx = w / 2, midy = h / 2;
 
         for (int y = 0; y < h; y += step) {
             for (int x = 0; x < w; x += step) {
@@ -62,7 +66,7 @@ public class BallGroup {
                     hsv[1] = 1;
                     hsv[2] = 1;
 
-                    ballsArrayList.add(new Ball(s * x, s * y, 0, radius, Color.HSVToColor(hsv)));
+                    ballsArrayList.add(new Ball(s * (x - midx) + midx, s * (y - midy) + midy, 0, radius, Color.HSVToColor(hsv)));
                 }
             }
         }

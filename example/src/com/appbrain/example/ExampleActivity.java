@@ -1,5 +1,6 @@
 package com.appbrain.example;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
@@ -90,6 +91,7 @@ public class ExampleActivity extends Activity {
     }
 
     @Override
+    @TargetApi(value=5)
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (android.os.Build.VERSION.SDK_INT < 5 && keyCode == KeyEvent.KEYCODE_BACK
             && event.getRepeatCount() == 0) {

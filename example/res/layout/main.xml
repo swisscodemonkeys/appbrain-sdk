@@ -5,7 +5,7 @@
 
     <com.appbrain.example.fun.LogoView
         android:layout_width="fill_parent"
-        android:layout_height="150dip" >
+        android:layout_height="120dip" >
     </com.appbrain.example.fun.LogoView>
 
 

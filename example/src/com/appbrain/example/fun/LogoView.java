@@ -35,7 +35,7 @@ public class LogoView extends View {
     }
 
     void doUpdate(Canvas canvas) {
-        if (ballGroup == null) {
+        if (ballGroup == null || ballGroup.width != getWidth() || ballGroup.height != getHeight()) {
             ballGroup = new BallGroup(getWidth(), getHeight());
         }
 
