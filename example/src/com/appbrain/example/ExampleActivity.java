@@ -66,22 +66,6 @@ public class ExampleActivity extends Activity {
                 ads.showOfferWall(ExampleActivity.this);
             }
         });
-
-        
-        findViewById(R.id.show_popup).setOnClickListener(new OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                ads.showDialog(ExampleActivity.this, "Hello", "This is an example", "Ok", new Runnable() {
-
-                    @Override
-                    public void run() {
-                        Toast.makeText(ExampleActivity.this, "You selected 'Ok'", Toast.LENGTH_LONG).show();
-                    }
-                });
-            }
-        });
-
     }
 
     // @Override
