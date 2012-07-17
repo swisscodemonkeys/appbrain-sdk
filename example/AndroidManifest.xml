@@ -16,12 +16,13 @@
             android:name=".ExampleActivity" >
             <intent-filter >
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         
-		<!-- AppBrain SDK -->
+        <activity android:name=".BannerActivity"></activity>
+        
+		<!-- AppBrain AppLift SDK -->
 		<activity android:configChanges="keyboard|keyboardHidden|orientation" 
 		    android:name="com.appbrain.AppBrainActivity" />
 		<receiver android:exported="true" android:name="com.appbrain.ReferrerReceiver" >
@@ -30,6 +31,7 @@
 		    </intent-filter>
 		</receiver>
 		<service android:name="com.appbrain.AppBrainService" />
+		<!--  End of AppLift SDK -->
     </application>
 
 </manifest>

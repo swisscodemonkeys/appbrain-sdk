@@ -2,6 +2,7 @@ package com.appbrain.example;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.KeyEvent;
@@ -79,6 +80,15 @@ public class ExampleActivity extends Activity {
                         Toast.makeText(ExampleActivity.this, "You selected 'Ok'", Toast.LENGTH_LONG).show();
                     }
                 });
+            }
+        });
+        
+        findViewById(R.id.show_banners).setOnClickListener(new OnClickListener() {
+            
+            @Override
+            public void onClick(View arg0) {
+                Intent intent = new Intent(ExampleActivity.this, BannerActivity.class);
+                startActivity(intent);
             }
         });
 

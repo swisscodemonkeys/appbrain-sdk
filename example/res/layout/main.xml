@@ -22,5 +22,12 @@
 
 	<Button android:id="@+id/show_offerwall" android:layout_width="200dp"
 		android:layout_height="wrap_content" android:text="Show Offerwall" />
-
+	
+	<Button android:id="@+id/show_banners" android:layout_width="200dp"
+		android:layout_height="wrap_content" android:text="Banner playground" />
+		
+	<View android:layout_height="0dp" android:layout_width="10dp" android:layout_weight="1"/>
+<com.appbrain.AppBrainBanner xmlns:appbrain="http://schemas.android.com/apk/lib/com.appbrain"
+      appbrain:colors="12" appbrain:looks="0" appbrain:title="0" appbrain:button="0"
+      android:layout_width="fill_parent" android:layout_height="wrap_content"/>
 </LinearLayout>
