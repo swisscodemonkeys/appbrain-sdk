@@ -4,19 +4,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.graphics.Bitmap;
+import android.graphics.Bitmap.Config;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.Bitmap.Config;
-import android.graphics.Paint.Align;
+import android.util.Log;
 
 public class BallGroup {
     final int width;
     final int height;
     List<Ball> balls;
     private Bitmap bitmap;
+    private final int step;
 
-    public BallGroup(int width, int height) {
+    public BallGroup(int width, int height, int step) {
+        this.step = step;
         this.width = width;
         this.height = height;
         balls = new ArrayList<Ball>(0);
@@ -26,7 +28,6 @@ public class BallGroup {
     }
 
     private void createText(List<Ball> ballsArrayList, String text) {
-        int step = 6;
         int w = (width / step) * step;
         int h = (height / step) * step;
 

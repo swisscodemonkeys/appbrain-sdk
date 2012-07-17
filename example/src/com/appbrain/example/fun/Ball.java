@@ -56,9 +56,10 @@ public class Ball extends SpringObject {
     }
 
     public void draw(Canvas canvas) {
-
         paint.setColor(color);
-        canvas.drawCircle(pos.x, pos.y, radius, paint);
-
+        // don't do circles, they are extremely slow on hardware accelerated devices
+        //canvas.drawCircle(pos.x, pos.y, radius, paint);
+        canvas.drawRect(pos.x - radius / 2, pos.y - radius / 2, pos.x + radius / 2, pos.y + radius
+            / 2, paint);
     }
 }
