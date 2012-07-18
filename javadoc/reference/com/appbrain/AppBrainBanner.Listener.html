@@ -90,9 +90,19 @@
 
 <body class="">
 
+<style>
+#header {
+  height: 70px;background-color: #676767;
+  color: #fff;
+}
+#header a, a:visited {
+  color: #fff;
+}
+</style>
   <div id="header">
     <div id="headerLeft">
-      <img src="http://www.appbrain.com/images/logo.png"/>
+      <a href="http://www.appbrain.com/info/sdk">
+      <img src="http://www.appbrain.com/images/appbrain.png" style="border:0"/></a>
       AppBrain AppLift SDK
     </div>
     <div id="headerRight">
@@ -309,6 +319,24 @@
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../com/appbrain/AppBrainBanner.Listener.html#onAdRequestDone(boolean)">onAdRequestDone</a></span>(boolean adAvailable)</nobr>
+        
+        <div class="jd-descrdiv">Gets called after a call to requestAd().</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../com/appbrain/AppBrainBanner.Listener.html#onClick()">onClick</a></span>()</nobr>
         
         <div class="jd-descrdiv">Gets called when a banner receives a click from the user.</div>
@@ -364,6 +392,48 @@
 
 
 
+<A NAME="onAdRequestDone(boolean)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        void
+      </span>
+      <span class="sympad">onAdRequestDone</span>
+      <span class="normal">(boolean adAvailable)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Gets called after a call to requestAd().
+ The thread on which this method gets called is unspecified (it may be the UI thread or it may not be). </p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>adAvailable</td>
+          <td>Whether there's an ad available to serve or not.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
 <A NAME="onClick()"></A>
 
 <div class="jd-details api apilevel-"> 
@@ -390,6 +460,7 @@
     <div class="jd-details-descr">
       
   <div class="jd-tagdata jd-tagdescr"><p>Gets called when a banner receives a click from the user.
+ This method gets called on the UI thread.
 </p></div>
 
     </div>

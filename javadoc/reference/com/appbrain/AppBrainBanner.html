@@ -90,9 +90,19 @@
 
 <body class="">
 
+<style>
+#header {
+  height: 70px;background-color: #676767;
+  color: #fff;
+}
+#header a, a:visited {
+  color: #fff;
+}
+</style>
   <div id="header">
     <div id="headerLeft">
-      <img src="http://www.appbrain.com/images/logo.png"/>
+      <a href="http://www.appbrain.com/info/sdk">
+      <img src="http://www.appbrain.com/images/appbrain.png" style="border:0"/></a>
       AppBrain AppLift SDK
     </div>
     <div id="headerRight">
@@ -1144,7 +1154,7 @@ android.view.View
             
             
             
-            boolean</nobr>
+            void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../com/appbrain/AppBrainBanner.html#requestAd()">requestAd</a></span>()</nobr>
@@ -9035,7 +9045,7 @@ From interface
          
          
         synchronized 
-        boolean
+        void
       </span>
       <span class="sympad">requestAd</span>
       <span class="normal">()</span>
@@ -9050,12 +9060,8 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Request an ad to be fetched.</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>Whether an ad is available at the moment or not.
-</li></ul>
-  </div>
+  <div class="jd-tagdata jd-tagdescr"><p>Request an ad to be fetched. If a listener was set on this banner, that listener will be notified of the result.
+</p></div>
 
     </div>
 </div>
