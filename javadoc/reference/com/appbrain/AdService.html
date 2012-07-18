@@ -90,9 +90,19 @@
 
 <body class="">
 
+<style>
+#header {
+  height: 70px;background-color: #676767;
+  color: #fff;
+}
+#header a, a:visited {
+  color: #fff;
+}
+</style>
   <div id="header">
     <div id="headerLeft">
-      <img src="http://www.appbrain.com/images/logo.png"/>
+      <a href="http://www.appbrain.com/info/sdk">
+      <img src="http://www.appbrain.com/images/appbrain.png" style="border:0"/></a>
       AppBrain AppLift SDK
     </div>
     <div id="headerRight">
@@ -328,7 +338,11 @@
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../com/appbrain/AdService.html#maybeShowOfferWall(android.app.Activity)">maybeShowOfferWall</a></span>(Activity activity)</nobr>
         
-        <div class="jd-descrdiv">Shows the offerwall sometimes.</div>
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use the interstitial, banners, or showOfferWall directly (if you have permission). This function will be removed in a future version.
+</em></div>
   
   </td></tr>
 
@@ -346,8 +360,11 @@
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../com/appbrain/AdService.html#showDialog(android.app.Activity, java.lang.String, java.lang.String, java.lang.String, java.lang.Runnable)">showDialog</a></span>(Activity activity, String title, String message, String buttonText, Runnable runnable)</nobr>
         
-        <div class="jd-descrdiv">Shows an AlertDialog with an extra button "More apps" which takes
- the user to the offer wall.</div>
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use the interstitial, banners, or showOfferWall directly (if you have permission). This function will be removed in a future version.            
+</em></div>
   
   </td></tr>
 
@@ -497,14 +514,18 @@
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution">
+      <strong>
+  This method is deprecated.</strong><br/> Use the interstitial, banners, or showOfferWall directly (if you have permission). This function will be removed in a future version.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Shows the offerwall sometimes. This method is useful eg. to call on a
  common UI element, eg a "Next" button. It only shows the offerwall after
  a few actions and only once every few days.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>true if the offerwall was shown
-</li></ul>
+      <ul class="nolist"><li>true if the offerwall was shown</li></ul>
   </div>
 
     </div>
@@ -535,7 +556,12 @@
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution">
+      <strong>
+  This method is deprecated.</strong><br/> Use the interstitial, banners, or showOfferWall directly (if you have permission). This function will be removed in a future version.            
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Shows an AlertDialog with an extra button "More apps" which takes
  the user to the offer wall.</p></div>
   <div class="jd-tagdata">
@@ -559,8 +585,7 @@
         </tr>
         <tr>
           <th>runnable</td>
-          <td>called after the user clicks the button. can be null
-</td>
+          <td>called after the user clicks the button. can be null</td>
         </tr>
       </table>
   </div>
