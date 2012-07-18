@@ -24,6 +24,6 @@
 		
 	<View android:layout_height="0dp" android:layout_width="10dp" android:layout_weight="1"/>
 <com.appbrain.AppBrainBanner xmlns:appbrain="http://schemas.android.com/apk/lib/com.appbrain"
-      appbrain:colors="12" appbrain:looks="0" appbrain:title="0" appbrain:button="0"
+      appbrain:colors="12" appbrain:design="0" appbrain:title="0" appbrain:button="0"
       android:layout_width="fill_parent" android:layout_height="wrap_content"/>
 </LinearLayout>

@@ -184,7 +184,7 @@
 </parameter>
 </constructor>
 <method name="requestAd"
- return="boolean"
+ return="void"
  abstract="false"
  native="false"
  synchronized="true"
@@ -267,6 +267,19 @@
  deprecated="not deprecated"
  visibility="public"
 >
+<method name="onAdRequestDone"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="adAvailable" type="boolean">
+</parameter>
+</method>
 <method name="onClick"
  return="void"
  abstract="true"

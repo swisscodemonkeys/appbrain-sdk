@@ -1144,7 +1144,7 @@ android.view.View
             
             
             
-            boolean</nobr>
+            void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../com/appbrain/AppBrainBanner.html#requestAd()">requestAd</a></span>()</nobr>
@@ -9035,7 +9035,7 @@ From interface
          
          
         synchronized 
-        boolean
+        void
       </span>
       <span class="sympad">requestAd</span>
       <span class="normal">()</span>
@@ -9050,12 +9050,8 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Request an ad to be fetched.</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>Whether an ad is available at the moment or not.
-</li></ul>
-  </div>
+  <div class="jd-tagdata jd-tagdescr"><p>Request an ad to be fetched. If a listener was set on this banner, that listener will be notified of the result.
+</p></div>
 
     </div>
 </div>
