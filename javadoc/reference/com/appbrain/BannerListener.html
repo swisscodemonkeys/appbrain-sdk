@@ -58,7 +58,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico" />
 <title>
 
-  AdService - AppBrain AppLift Javadoc
+  BannerListener - AppBrain AppLift Javadoc
 
 
 | AppBrain AppLift SDK
@@ -134,8 +134,8 @@
               
     <li><h2>Interfaces</h2>
       <ul>
-          <li class="selected api apilevel-"><a href="../../com/appbrain/AdService.html">AdService</a></li>
-          <li class="api apilevel-"><a href="../../com/appbrain/BannerListener.html">BannerListener</a></li>
+          <li class="api apilevel-"><a href="../../com/appbrain/AdService.html">AdService</a></li>
+          <li class="selected api apilevel-"><a href="../../com/appbrain/BannerListener.html">BannerListener</a></li>
           <li class="api apilevel-"><a href="../../com/appbrain/RemoteSettings.html">RemoteSettings</a></li>
       </ul>
     </li>
@@ -212,7 +212,7 @@
      
     
     interface
-<h1>AdService</h1>
+<h1>BannerListener</h1>
 
 
 
@@ -231,7 +231,7 @@
 
     <tr>
          	
-        <td colspan="1" class="jd-inheritance-class-cell">com.appbrain.AdService</td>
+        <td colspan="1" class="jd-inheritance-class-cell">com.appbrain.BannerListener</td>
     </tr>
     
 
@@ -247,7 +247,9 @@
 
 
 <h2>Class Overview</h2>
-<p>The AdService provides methods to show the AppBrain offerwall and interstitial</p>
+<p>This is a listener interface to be notified when someone clicked the AppBrain banner.
+ This is purely for reporting purposes, the implementation takes care of opening the offerwall etc. 
+</p>
 
 
 
@@ -314,13 +316,12 @@
             
             
             
-            boolean</nobr>
+            void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../com/appbrain/AdService.html#maybeShowInterstitial(android.app.Activity)">maybeShowInterstitial</a></span>(Activity activity)</nobr>
+        <span class="sympad"><a href="../../com/appbrain/BannerListener.html#onAdRequestDone(boolean)">onAdRequestDone</a></span>(boolean adAvailable)</nobr>
         
-        <div class="jd-descrdiv">Shows an interstitial activity sometimes (at most once per 3 days by default, and only when
- there is an internet connection).</div>
+        <div class="jd-descrdiv">Gets called after a call to requestAd().</div>
   
   </td></tr>
 
@@ -333,74 +334,12 @@
             
             
             
-            boolean</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../com/appbrain/AdService.html#maybeShowOfferWall(android.app.Activity)">maybeShowOfferWall</a></span>(Activity activity)</nobr>
-        
-        <div class="jd-descrdiv">
-      <em>
-  This method is deprecated.
-      Use the interstitial, banners, or showOfferWall directly (if you have permission). This function will be removed in a future version.
-</em></div>
-  
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../com/appbrain/AdService.html#showDialog(android.app.Activity, java.lang.String, java.lang.String, java.lang.String, java.lang.Runnable)">showDialog</a></span>(Activity activity, String title, String message, String buttonText, Runnable runnable)</nobr>
+        <span class="sympad"><a href="../../com/appbrain/BannerListener.html#onClick()">onClick</a></span>()</nobr>
         
-        <div class="jd-descrdiv">
-      <em>
-  This method is deprecated.
-      Use the interstitial, banners, or showOfferWall directly (if you have permission). This function will be removed in a future version.            
-</em></div>
-  
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            
-            boolean</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../com/appbrain/AdService.html#showInterstitial(android.app.Activity)">showInterstitial</a></span>(Activity activity)</nobr>
-        
-        <div class="jd-descrdiv">Shows the interstitial (if there is an internet connection).</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            
-            void</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../com/appbrain/AdService.html#showOfferWall(android.content.Context)">showOfferWall</a></span>(Context activity)</nobr>
-        
-        <div class="jd-descrdiv">Shows the offer wall with the list of promoted apps.</div>
+        <div class="jd-descrdiv">Gets called when a banner receives a click from the user.</div>
   
   </td></tr>
 
@@ -453,86 +392,7 @@
 
 
 
-<A NAME="maybeShowInterstitial(android.app.Activity)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-        abstract 
-         
-        boolean
-      </span>
-      <span class="sympad">maybeShowInterstitial</span>
-      <span class="normal">(Activity activity)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Shows an interstitial activity sometimes (at most once per 3 days by default, and only when
- there is an internet connection).</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>true if the interstitial was shown
-</li></ul>
-  </div>
-
-    </div>
-</div>
-
-
-<A NAME="maybeShowOfferWall(android.app.Activity)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-        abstract 
-         
-        boolean
-      </span>
-      <span class="sympad">maybeShowOfferWall</span>
-      <span class="normal">(Activity activity)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      <p>
-  <p class="caution">
-      <strong>
-  This method is deprecated.</strong><br/> Use the interstitial, banners, or showOfferWall directly (if you have permission). This function will be removed in a future version.
-
-  </p>
-  <div class="jd-tagdata jd-tagdescr"><p>Shows the offerwall sometimes. This method is useful eg. to call on a
- common UI element, eg a "Next" button. It only shows the offerwall after
- a few actions and only once every few days.</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>true if the offerwall was shown</li></ul>
-  </div>
-
-    </div>
-</div>
-
-
-<A NAME="showDialog(android.app.Activity, java.lang.String, java.lang.String, java.lang.String, java.lang.Runnable)"></A>
+<A NAME="onAdRequestDone(boolean)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -544,70 +404,8 @@
          
         void
       </span>
-      <span class="sympad">showDialog</span>
-      <span class="normal">(Activity activity, String title, String message, String buttonText, Runnable runnable)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      <p>
-  <p class="caution">
-      <strong>
-  This method is deprecated.</strong><br/> Use the interstitial, banners, or showOfferWall directly (if you have permission). This function will be removed in a future version.            
-
-  </p>
-  <div class="jd-tagdata jd-tagdescr"><p>Shows an AlertDialog with an extra button "More apps" which takes
- the user to the offer wall.</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>activity</td>
-          <td>the current Activity</td>
-        </tr>
-        <tr>
-          <th>title</td>
-          <td>the title of the dialog. can be null.</td>
-        </tr>
-        <tr>
-          <th>message</td>
-          <td>the message of the dialog. can be null.</td>
-        </tr>
-        <tr>
-          <th>buttonText</td>
-          <td>the text of the first button</td>
-        </tr>
-        <tr>
-          <th>runnable</td>
-          <td>called after the user clicks the button. can be null</td>
-        </tr>
-      </table>
-  </div>
-
-    </div>
-</div>
-
-
-<A NAME="showInterstitial(android.app.Activity)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-        abstract 
-         
-        boolean
-      </span>
-      <span class="sympad">showInterstitial</span>
-      <span class="normal">(Activity activity)</span>
+      <span class="sympad">onAdRequestDone</span>
+      <span class="normal">(boolean adAvailable)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -619,56 +417,51 @@
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Shows the interstitial (if there is an internet connection).</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>true if the interstitial was shown
-</li></ul>
-  </div>
-
-    </div>
-</div>
-
-
-<A NAME="showOfferWall(android.content.Context)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-        abstract 
-         
-        void
-      </span>
-      <span class="sympad">showOfferWall</span>
-      <span class="normal">(Context activity)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Shows the offer wall with the list of promoted apps.
- You need to request explicit approval to use this method through contact@appbrain.com
- otherwise it won't generate any revenue for you. See http://www.appbrain.com/info/sdk
- for more information.</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Gets called after a call to requestAd().
+ The thread on which this method gets called is unspecified (it may be the UI thread or it may not be). </p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>activity</td>
-          <td>the current Activity
+          <th>adAvailable</td>
+          <td>Whether there's an ad available to serve or not.
 </td>
         </tr>
       </table>
   </div>
+
+    </div>
+</div>
+
+
+<A NAME="onClick()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        void
+      </span>
+      <span class="sympad">onClick</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Gets called when a banner receives a click from the user.
+ This method gets called on the UI thread.
+</p></div>
 
     </div>
 </div>
