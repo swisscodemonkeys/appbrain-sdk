@@ -4,15 +4,16 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemSelectedListener;
-import android.widget.LinearLayout.LayoutParams;
 import android.widget.ArrayAdapter;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+import android.widget.Toast;
+import android.widget.LinearLayout.LayoutParams;
 import android.widget.Spinner;
 
 import com.appbrain.AppBrainBanner;
+import com.appbrain.BannerListener;
 
 public class BannerActivity extends Activity {
     private static final String[] COLOR_NAMES = {
@@ -113,6 +114,18 @@ public class BannerActivity extends Activity {
     private void loadAd() {
         container.removeAllViews();
         AppBrainBanner banner = new AppBrainBanner(BannerActivity.this);
+        banner.setBannerListener(new BannerListener() {
+
+            @Override
+            public void onAdRequestDone(boolean arg0) {
+                // Ignore
+            }
+
+            @Override
+            public void onClick() {
+                Toast.makeText(BannerActivity.this, "Banner clicked!", Toast.LENGTH_SHORT).show();
+            } });
+        
         banner.setTitleIndex(title.getSelectedItemPosition());
         banner.setButtonTextIndex(button.getSelectedItemPosition());
         banner.setDesign(design.getSelectedItemPosition());
