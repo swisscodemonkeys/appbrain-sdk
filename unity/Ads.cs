@@ -73,7 +73,7 @@ namespace AppLift {
 			if (killWhenDone) {
 				appbrainUnity.CallStatic("killWhenDone", AppBrain.GetCurrentActivity());
 			} else {
-				appbrainUnity.CallStatic("killWhenDone");
+				appbrainUnity.CallStatic("killWhenDone", null);
 			}
 		}
 	}

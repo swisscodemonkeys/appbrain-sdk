@@ -11,24 +11,20 @@ Integration steps:
   * Call AppLift functions where appropriate (see below)
 
 The following example javascript-File that calls AppLift functions. 
--------------------------------------------------------------------
 
-using UnityEngine;
-using System.Collections;
-using AppLift;
 
-public class AppLiftController: MonoBehaviour {
-
+	using AppLift;
+	
 	// Use this for initialization
 	void Start () {
 		AppBrain.Init();
 	}
-	
-	// Called as the Application Quits
-	void OnApplicationQuit () {
-		AppBrain.GetAds().ShowInterstitial(false);
+
+	function Update () {
+		if (Input.GetKeyUp(KeyCode.Escape)) {
+			AppBrain.getAds().showInterstitial(true);
+		}
 	}
-}
 
 -------------------------------------------------------------------
 
