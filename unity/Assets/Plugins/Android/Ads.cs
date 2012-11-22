@@ -39,16 +39,6 @@ namespace AppLift {
 			}
 		}
 		
-		public bool MaybeShowOfferWall() {
-			try {
-				SetKillWhenDone(false);
-				return ads.Call<bool>("maybeShowOfferWall", AppBrain.GetCurrentActivity());
-			} catch (Exception e) {
-				Debug.LogError(e);
-				return false;
-			}
-		}
-		
 		public bool ShowInterstitial(bool quitWhenDone) {
 			try {
 				SetKillWhenDone(quitWhenDone);
@@ -73,17 +63,13 @@ namespace AppLift {
 			if (killWhenDone) {
 				appbrainUnity.CallStatic("killWhenDone", AppBrain.GetCurrentActivity());
 			} else {
-				appbrainUnity.CallStatic("killWhenDone", null);
+				appbrainUnity.CallStatic("dontKillWhenDone");
 			}
 		}
 	}
 #else
 	public class Ads {
 		public void ShowOfferWall() {
-		}
-		
-		public bool MaybeShowOfferWall() {
-			return false;
 		}
 		
 		public bool ShowInterstitial(bool quitWhenDone) {

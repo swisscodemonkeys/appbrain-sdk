@@ -7,22 +7,24 @@ Integration steps:
 
   * Open Unity with your project, eg "MyProject"
   * Copy the included files (Ads.cs, AppBrain.cs,AndroidManifest.xml and appbrain-sdk-android.jar) to "MyProject"/Assets/Plugins/Android
-  * Enter your app's packagename into the AndroidManifest.xml file located at Assets/Plugins/Android/AndroidManifest.xml
   * Call AppLift functions where appropriate (see below)
 
-The following example javascript-File that calls AppLift functions. 
+The following example file calls the AppLift functions. 
 
 
+	using UnityEngine;
+	using System.Collections;
 	using AppLift;
-	
-	// Use this for initialization
-	void Start () {
-		AppBrain.Init();
-	}
 
-	function Update () {
-		if (Input.GetKeyUp(KeyCode.Escape)) {
-			AppBrain.getAds().showInterstitial(true);
+	public class main : MonoBehaviour {
+		void Start () {
+	    		AppBrain.Init();
+		}
+
+		void Update () {
+		    if (Input.GetKeyUp(KeyCode.Escape)) {
+			AppBrain.GetAds().ShowInterstitial(true);
+		    }
 		}
 	}
 
