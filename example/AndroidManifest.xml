@@ -23,7 +23,7 @@
         <activity android:name=".BannerActivity"></activity>
         
 		<!-- AppBrain AppLift SDK -->
-		<activity android:configChanges="keyboard|keyboardHidden|orientation" 
+		<activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" 
 		    android:name="com.appbrain.AppBrainActivity" />
 		<receiver android:exported="true" android:name="com.appbrain.ReferrerReceiver" >
 		    <intent-filter>
