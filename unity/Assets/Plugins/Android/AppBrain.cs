@@ -47,6 +47,16 @@ namespace AppLift {
 				return new Ads(null);
 			}
 		}
+
+		public static RemoteSettings GetSettings() {
+			try {
+				return new RemoteSettings(appbrain.CallStatic<AndroidJavaObject>("getSettings"));
+			} catch (Exception e) {
+				Debug.LogError(e);
+				return new RemoteSettings(null);
+			}
+		}
+	
 		
 		public static AndroidJavaObject GetCurrentActivity() {
 			try {
