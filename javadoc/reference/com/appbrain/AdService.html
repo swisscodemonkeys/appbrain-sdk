@@ -317,7 +317,7 @@
             boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../com/appbrain/AdService.html#maybeShowInterstitial(android.app.Activity)">maybeShowInterstitial</a></span>(Activity activity)</nobr>
+        <span class="sympad"><a href="../../com/appbrain/AdService.html#maybeShowInterstitial(android.content.Context)">maybeShowInterstitial</a></span>(Context context)</nobr>
         
         <div class="jd-descrdiv">Shows an interstitial activity sometimes (at most once per 3 days by default, and only when
  there is an internet connection).</div>
@@ -336,13 +336,9 @@
             boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../com/appbrain/AdService.html#maybeShowOfferWall(android.app.Activity)">maybeShowOfferWall</a></span>(Activity activity)</nobr>
+        <span class="sympad"><a href="../../com/appbrain/AdService.html#shouldShowInterstitial(android.content.Context)">shouldShowInterstitial</a></span>(Context context)</nobr>
         
-        <div class="jd-descrdiv">
-      <em>
-  This method is deprecated.
-      Use the interstitial, banners, or showOfferWall directly (if you have permission). This function will be removed in a future version.
-</em></div>
+        <div class="jd-descrdiv">Query whether maybeShowInterstitial would show an interstitial now or not.</div>
   
   </td></tr>
 
@@ -355,16 +351,12 @@
             
             
             
-            void</nobr>
+            boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../com/appbrain/AdService.html#showDialog(android.app.Activity, java.lang.String, java.lang.String, java.lang.String, java.lang.Runnable)">showDialog</a></span>(Activity activity, String title, String message, String buttonText, Runnable runnable)</nobr>
+        <span class="sympad"><a href="../../com/appbrain/AdService.html#showInterstitial(android.content.Context)">showInterstitial</a></span>(Context context)</nobr>
         
-        <div class="jd-descrdiv">
-      <em>
-  This method is deprecated.
-      Use the interstitial, banners, or showOfferWall directly (if you have permission). This function will be removed in a future version.            
-</em></div>
+        <div class="jd-descrdiv">Shows the interstitial (if there is an internet connection).</div>
   
   </td></tr>
 
@@ -377,28 +369,10 @@
             
             
             
-            boolean</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../com/appbrain/AdService.html#showInterstitial(android.app.Activity)">showInterstitial</a></span>(Activity activity)</nobr>
-        
-        <div class="jd-descrdiv">Shows the interstitial (if there is an internet connection).</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../com/appbrain/AdService.html#showOfferWall(android.content.Context)">showOfferWall</a></span>(Context activity)</nobr>
+        <span class="sympad"><a href="../../com/appbrain/AdService.html#showOfferWall(android.content.Context)">showOfferWall</a></span>(Context context)</nobr>
         
         <div class="jd-descrdiv">Shows the offer wall with the list of promoted apps.</div>
   
@@ -453,7 +427,7 @@
 
 
 
-<A NAME="maybeShowInterstitial(android.app.Activity)"></A>
+<A NAME="maybeShowInterstitial(android.content.Context)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -466,7 +440,7 @@
         boolean
       </span>
       <span class="sympad">maybeShowInterstitial</span>
-      <span class="normal">(Activity activity)</span>
+      <span class="normal">(Context context)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -481,6 +455,15 @@
   <div class="jd-tagdata jd-tagdescr"><p>Shows an interstitial activity sometimes (at most once per 3 days by default, and only when
  there is an internet connection).</p></div>
   <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>context</td>
+          <td>The current context</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
       <ul class="nolist"><li>true if the interstitial was shown
 </li></ul>
@@ -490,7 +473,7 @@
 </div>
 
 
-<A NAME="maybeShowOfferWall(android.app.Activity)"></A>
+<A NAME="shouldShowInterstitial(android.content.Context)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -502,8 +485,8 @@
          
         boolean
       </span>
-      <span class="sympad">maybeShowOfferWall</span>
-      <span class="normal">(Activity activity)</span>
+      <span class="sympad">shouldShowInterstitial</span>
+      <span class="normal">(Context context)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -514,87 +497,28 @@
 
       </div>
     <div class="jd-details-descr">
-      <p>
-  <p class="caution">
-      <strong>
-  This method is deprecated.</strong><br/> Use the interstitial, banners, or showOfferWall directly (if you have permission). This function will be removed in a future version.
-
-  </p>
-  <div class="jd-tagdata jd-tagdescr"><p>Shows the offerwall sometimes. This method is useful eg. to call on a
- common UI element, eg a "Next" button. It only shows the offerwall after
- a few actions and only once every few days.</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>true if the offerwall was shown</li></ul>
-  </div>
-
-    </div>
-</div>
-
-
-<A NAME="showDialog(android.app.Activity, java.lang.String, java.lang.String, java.lang.String, java.lang.Runnable)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-        abstract 
-         
-        void
-      </span>
-      <span class="sympad">showDialog</span>
-      <span class="normal">(Activity activity, String title, String message, String buttonText, Runnable runnable)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      <p>
-  <p class="caution">
-      <strong>
-  This method is deprecated.</strong><br/> Use the interstitial, banners, or showOfferWall directly (if you have permission). This function will be removed in a future version.            
-
-  </p>
-  <div class="jd-tagdata jd-tagdescr"><p>Shows an AlertDialog with an extra button "More apps" which takes
- the user to the offer wall.</p></div>
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Query whether maybeShowInterstitial would show an interstitial now or not.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>activity</td>
-          <td>the current Activity</td>
-        </tr>
-        <tr>
-          <th>title</td>
-          <td>the title of the dialog. can be null.</td>
-        </tr>
-        <tr>
-          <th>message</td>
-          <td>the message of the dialog. can be null.</td>
-        </tr>
-        <tr>
-          <th>buttonText</td>
-          <td>the text of the first button</td>
-        </tr>
-        <tr>
-          <th>runnable</td>
-          <td>called after the user clicks the button. can be null</td>
+          <th>context</td>
+          <td>The current context</td>
         </tr>
       </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>Whether maybeShowInterstitial would show an interstitial or not.
+</li></ul>
   </div>
 
     </div>
 </div>
 
 
-<A NAME="showInterstitial(android.app.Activity)"></A>
+<A NAME="showInterstitial(android.content.Context)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -607,7 +531,7 @@
         boolean
       </span>
       <span class="sympad">showInterstitial</span>
-      <span class="normal">(Activity activity)</span>
+      <span class="normal">(Context context)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -620,6 +544,15 @@
     <div class="jd-details-descr">
       
   <div class="jd-tagdata jd-tagdescr"><p>Shows the interstitial (if there is an internet connection).</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>context</td>
+          <td>The current context</td>
+        </tr>
+      </table>
+  </div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
       <ul class="nolist"><li>true if the interstitial was shown
@@ -643,7 +576,7 @@
         void
       </span>
       <span class="sympad">showOfferWall</span>
-      <span class="normal">(Context activity)</span>
+      <span class="normal">(Context context)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -663,8 +596,8 @@
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>activity</td>
-          <td>the current Activity
+          <th>context</td>
+          <td>the current Context
 </td>
         </tr>
       </table>
