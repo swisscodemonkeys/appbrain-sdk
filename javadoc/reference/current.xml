@@ -173,19 +173,6 @@
  visibility="public"
 >
 </method>
-<method name="requestAd"
- return="void"
- abstract="false"
- native="false"
- synchronized="true"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="idString" type="java.lang.String">
-</parameter>
-</method>
 <method name="setBannerListener"
  return="void"
  abstract="false"
@@ -236,6 +223,21 @@
  visibility="public"
 >
 <parameter name="index" type="int">
+</parameter>
+</method>
+<method name="setIsMediatedBanner"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="isMediated" type="boolean">
+</parameter>
+<parameter name="name" type="java.lang.String">
 </parameter>
 </method>
 <method name="setTitleIndex"
