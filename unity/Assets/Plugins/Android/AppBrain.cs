@@ -76,6 +76,9 @@ namespace AppLift {
 		public static Ads GetAds() {
 			return new Ads();
 		}
+		public static RemoteSettings GetSettings() {
+		       return new RemoteSettings();
+		}
 	}
 #endif
 }
