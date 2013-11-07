@@ -33,6 +33,7 @@ namespace AppLift {
 				return settings.Call<String>("get", key);
 			} catch (Exception e) {
 				Debug.LogError(e);
+				return "";
 			}
 		}
 
@@ -41,6 +42,7 @@ namespace AppLift {
 				return settings.Call<String>("get", key, defaultValue);
 			} catch (Exception e) {
 				Debug.LogError(e);
+				return defaultValue;
 			}
 		}
 
