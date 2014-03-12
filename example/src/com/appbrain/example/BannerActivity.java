@@ -94,7 +94,7 @@ public class BannerActivity extends Activity {
         mainLayout.addView(color);
         
         View filler = new View(this);
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LayoutParams.FILL_PARENT, 0);
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, 0);
         params.weight = 1.0f;
         mainLayout.addView(filler, params);
         
