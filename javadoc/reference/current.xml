@@ -61,6 +61,29 @@
 </parameter>
 </method>
 </interface>
+<interface name="AdvertiserService"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="sendConversionEvent"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+<parameter name="value" type="int">
+</parameter>
+</method>
+</interface>
 <class name="AppBrain"
  extends="java.lang.Object"
  abstract="false"
@@ -71,6 +94,17 @@
 >
 <method name="getAds"
  return="com.appbrain.AdService"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getAdvertiserService"
+ return="com.appbrain.AdvertiserService"
  abstract="false"
  native="false"
  synchronized="false"

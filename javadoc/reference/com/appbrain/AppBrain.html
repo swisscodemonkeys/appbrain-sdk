@@ -135,6 +135,7 @@
     <li><h2>Interfaces</h2>
       <ul>
           <li class="api apilevel-"><a href="../../com/appbrain/AdService.html">AdService</a></li>
+          <li class="api apilevel-"><a href="../../com/appbrain/AdvertiserService.html">AdvertiserService</a></li>
           <li class="api apilevel-"><a href="../../com/appbrain/BannerListener.html">BannerListener</a></li>
           <li class="api apilevel-"><a href="../../com/appbrain/RemoteSettings.html">RemoteSettings</a></li>
       </ul>
@@ -297,9 +298,9 @@ Summary:
  onCreate, don't forget to also check your Services and BroadcastReceivers for
  potential other entry points into your app.
  
- Otherwise you can call AppBrain.init(context) right before any calls to
- getAds or getSettings, but in that case you won't get an accurate number of
- active users, and loading of remote settings will be less frequent.</p>
+ Otherwise you can call AppBrain.init(context) right before any other calls to
+ the SDK, but in that case you won't get an accurate number of active users,
+ and loading of remote settings will be less frequent.</p>
 
 
 
@@ -385,6 +386,25 @@ Summary:
             
             static
             
+            <a href="../../com/appbrain/AdvertiserService.html">AdvertiserService</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../com/appbrain/AppBrain.html#getAdvertiserService()">getAdvertiserService</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Gets an AdvertiserService implementation, which allows you to send
+ conversion events to AppBrain.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
             <a href="../../com/appbrain/RemoteSettings.html">RemoteSettings</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
@@ -396,7 +416,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -414,7 +434,7 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -685,10 +705,51 @@ From class
   <div class="jd-tagdata jd-tagdescr"><p>Get an AdService implementation, which allows you to show AppBrain
  Promoted Apps.
  
- AppBrain.init needs to be called before this method!</p></div>
+ AppBrain.init needs to be called before this method!
+ 
+ This method is only available in the AppLift SDK.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
       <ul class="nolist"><li>An AdService implementation
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getAdvertiserService()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        <a href="../../com/appbrain/AdvertiserService.html">AdvertiserService</a>
+      </span>
+      <span class="sympad">getAdvertiserService</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Gets an AdvertiserService implementation, which allows you to send
+ conversion events to AppBrain.
+ 
+ AppBrain.init needs to be called before this method!</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>An AdvertiserService implementation
 </li></ul>
   </div>
 
