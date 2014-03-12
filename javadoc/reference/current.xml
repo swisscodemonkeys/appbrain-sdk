@@ -18,41 +18,20 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="activity" type="android.app.Activity">
+<parameter name="context" type="android.content.Context">
 </parameter>
 </method>
-<method name="maybeShowOfferWall"
+<method name="shouldShowInterstitial"
  return="boolean"
  abstract="true"
  native="false"
  synchronized="false"
  static="false"
  final="false"
- deprecated="deprecated"
+ deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="activity" type="android.app.Activity">
-</parameter>
-</method>
-<method name="showDialog"
- return="void"
- abstract="true"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="deprecated"
- visibility="public"
->
-<parameter name="activity" type="android.app.Activity">
-</parameter>
-<parameter name="title" type="java.lang.String">
-</parameter>
-<parameter name="message" type="java.lang.String">
-</parameter>
-<parameter name="buttonText" type="java.lang.String">
-</parameter>
-<parameter name="runnable" type="java.lang.Runnable">
+<parameter name="context" type="android.content.Context">
 </parameter>
 </method>
 <method name="showInterstitial"
@@ -65,7 +44,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="activity" type="android.app.Activity">
+<parameter name="context" type="android.content.Context">
 </parameter>
 </method>
 <method name="showOfferWall"
@@ -78,7 +57,30 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="activity" type="android.content.Context">
+<parameter name="context" type="android.content.Context">
+</parameter>
+</method>
+</interface>
+<interface name="AdvertiserService"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="sendConversionEvent"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+<parameter name="value" type="int">
 </parameter>
 </method>
 </interface>
@@ -92,6 +94,17 @@
 >
 <method name="getAds"
  return="com.appbrain.AdService"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getAdvertiserService"
+ return="com.appbrain.AdvertiserService"
  abstract="false"
  native="false"
  synchronized="false"
@@ -244,6 +257,21 @@
  visibility="public"
 >
 <parameter name="index" type="int">
+</parameter>
+</method>
+<method name="setIsMediatedBanner"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="isMediated" type="boolean">
+</parameter>
+<parameter name="name" type="java.lang.String">
 </parameter>
 </method>
 <method name="setTitleIndex"
