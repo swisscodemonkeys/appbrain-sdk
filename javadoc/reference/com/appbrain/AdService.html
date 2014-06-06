@@ -317,6 +317,22 @@
             
             
             
+            String</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../com/appbrain/AdService.html#getOfferWallButtonLabel(android.content.Context)">getOfferWallButtonLabel</a></span>(Context context)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
             boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
@@ -329,7 +345,44 @@
 
 
 	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../com/appbrain/AdService.html#setOfferWallClickListener(android.content.Context, android.view.View)">setOfferWallClickListener</a></span>(Context context, View view)</nobr>
+        
+        <div class="jd-descrdiv">Sets a view's OnClickListener to open the offer wall when clicked.</div>
+  
+  </td></tr>
+
+
+	 
     <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../com/appbrain/AdService.html#setOfferWallMenuItemClickListener(android.content.Context, android.view.MenuItem)">setOfferWallMenuItemClickListener</a></span>(Context context, MenuItem menuItem)</nobr>
+        
+        <div class="jd-descrdiv">Sets a menu item's OnMenuItemClickListener to open the offer wall when
+ clicked.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             abstract
             
@@ -347,7 +400,7 @@
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             abstract
             
@@ -365,7 +418,7 @@
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             abstract
             
@@ -430,6 +483,53 @@
 
 
 
+<A NAME="getOfferWallButtonLabel(android.content.Context)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        String
+      </span>
+      <span class="sympad">getOfferWallButtonLabel</span>
+      <span class="normal">(Context context)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>context</td>
+          <td>the current Context</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>an internationalized String which can be used for a button or
+         menu item which opens the offer wall. In English this is
+         "More free apps".
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
 <A NAME="maybeShowInterstitial(android.content.Context)"></A>
 
 <div class="jd-details api apilevel-"> 
@@ -470,6 +570,101 @@
       <h5 class="jd-tagtitle">Returns</h5>
       <ul class="nolist"><li>true if the interstitial was shown
 </li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="setOfferWallClickListener(android.content.Context, android.view.View)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        void
+      </span>
+      <span class="sympad">setOfferWallClickListener</span>
+      <span class="normal">(Context context, View view)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Sets a view's OnClickListener to open the offer wall when clicked. Unlike
+ the method showOfferWall(), you do not need explicit approval to use this
+ method.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>context</td>
+          <td>the current Context</td>
+        </tr>
+        <tr>
+          <th>view</td>
+          <td>the button or other clickable view which should open the offer
+            wall.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="setOfferWallMenuItemClickListener(android.content.Context, android.view.MenuItem)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        void
+      </span>
+      <span class="sympad">setOfferWallMenuItemClickListener</span>
+      <span class="normal">(Context context, MenuItem menuItem)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Sets a menu item's OnMenuItemClickListener to open the offer wall when
+ clicked. Unlike the method showOfferWall(), you do not need explicit
+ approval to use this method.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>context</td>
+          <td>the current Context</td>
+        </tr>
+        <tr>
+          <th>menuItem</td>
+          <td>the menu item which should open the offer wall.
+</td>
+        </tr>
+      </table>
   </div>
 
     </div>
