@@ -8,6 +8,19 @@
  deprecated="not deprecated"
  visibility="public"
 >
+<method name="getOfferWallButtonLabel"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+</method>
 <method name="maybeShowInterstitial"
  return="boolean"
  abstract="true"
@@ -19,6 +32,36 @@
  visibility="public"
 >
 <parameter name="context" type="android.content.Context">
+</parameter>
+</method>
+<method name="setOfferWallClickListener"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+<parameter name="view" type="android.view.View">
+</parameter>
+</method>
+<method name="setOfferWallMenuItemClickListener"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+<parameter name="menuItem" type="android.view.MenuItem">
 </parameter>
 </method>
 <method name="shouldShowInterstitial"
@@ -92,6 +135,19 @@
  deprecated="not deprecated"
  visibility="public"
 >
+<method name="addTestDevice"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="deviceId" type="java.lang.String">
+</parameter>
+</method>
 <method name="getAds"
  return="com.appbrain.AdService"
  abstract="false"
