@@ -60,13 +60,7 @@ public class ExampleActivity extends Activity {
             }
         });        
 
-        findViewById(R.id.show_offerwall).setOnClickListener(new OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                ads.showOfferWall(ExampleActivity.this);
-            }
-        });
+        ads.setOfferWallClickListener(this, findViewById(R.id.show_offerwall));
         
         findViewById(R.id.show_banners).setOnClickListener(new OnClickListener() {
             
