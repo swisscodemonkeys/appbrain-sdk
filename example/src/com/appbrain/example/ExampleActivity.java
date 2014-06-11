@@ -70,6 +70,13 @@ public class ExampleActivity extends Activity {
                 startActivity(intent);
             }
         });
+
+        findViewById(R.id.show_listview).setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ExampleActivity.this, ListAdsActivity.class));
+            }
+        });
     }
 
     // @Override

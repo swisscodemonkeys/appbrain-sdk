@@ -20,9 +20,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
-        <activity android:name=".BannerActivity"></activity>
-        
+
+        <activity android:name=".BannerActivity" />
+        <activity android:name=".ListAdsActivity" />
+
 		<!-- AppBrain AppLift SDK -->
 		<activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" 
 		    android:name="com.appbrain.AppBrainActivity" />
