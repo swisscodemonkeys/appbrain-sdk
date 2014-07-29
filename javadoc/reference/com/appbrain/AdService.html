@@ -134,15 +134,19 @@
               
     <li><h2>Interfaces</h2>
       <ul>
+          <li class="api apilevel-">AdListAdapter</li>
+          <li class="api apilevel-">AdListAdapter.AdLayoutCreator</li>
           <li class="selected api apilevel-"><a href="../../com/appbrain/AdService.html">AdService</a></li>
           <li class="api apilevel-"><a href="../../com/appbrain/AdvertiserService.html">AdvertiserService</a></li>
           <li class="api apilevel-"><a href="../../com/appbrain/BannerListener.html">BannerListener</a></li>
+          <li class="api apilevel-">InterstitialListener</li>
           <li class="api apilevel-"><a href="../../com/appbrain/RemoteSettings.html">RemoteSettings</a></li>
       </ul>
     </li>
               
     <li><h2>Classes</h2>
       <ul>
+          <li class="api apilevel-"><a href="../../com/appbrain/AdOptions.html">AdOptions</a></li>
           <li class="api apilevel-"><a href="../../com/appbrain/AppBrain.html">AppBrain</a></li>
           <li class="api apilevel-"><a href="../../com/appbrain/AppBrainBanner.html">AppBrainBanner</a></li>
           <li class="api apilevel-"><a href="../../com/appbrain/ReferrerReceiver.html">ReferrerReceiver</a></li>
@@ -336,7 +340,7 @@
             boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../com/appbrain/AdService.html#maybeShowInterstitial(android.content.Context)">maybeShowInterstitial</a></span>(Context context)</nobr>
+        <span class="sympad"><a href="../../com/appbrain/AdService.html#maybeShowInterstitial(android.content.Context, com.appbrain.AdOptions)">maybeShowInterstitial</a></span>(Context context, <a href="../../com/appbrain/AdOptions.html">AdOptions</a> options)</nobr>
         
         <div class="jd-descrdiv">Shows an interstitial activity sometimes (at most once per 3 days by default, and only when
  there is an internet connection).</div>
@@ -346,6 +350,25 @@
 
 	 
     <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            boolean</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../com/appbrain/AdService.html#maybeShowInterstitial(android.content.Context)">maybeShowInterstitial</a></span>(Context context)</nobr>
+        
+        <div class="jd-descrdiv">Shows an interstitial activity sometimes (at most once per 3 days by default, and only when
+ there is an internet connection).</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             abstract
             
@@ -363,7 +386,7 @@
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             abstract
             
@@ -382,7 +405,7 @@
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             abstract
             
@@ -395,6 +418,24 @@
         <span class="sympad"><a href="../../com/appbrain/AdService.html#shouldShowInterstitial(android.content.Context)">shouldShowInterstitial</a></span>(Context context)</nobr>
         
         <div class="jd-descrdiv">Query whether maybeShowInterstitial would show an interstitial now or not.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            boolean</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../com/appbrain/AdService.html#showInterstitial(android.content.Context, com.appbrain.AdOptions)">showInterstitial</a></span>(Context context, <a href="../../com/appbrain/AdOptions.html">AdOptions</a> options)</nobr>
+        
+        <div class="jd-descrdiv">Shows the interstitial (if there is an internet connection).</div>
   
   </td></tr>
 
@@ -431,6 +472,63 @@
         <span class="sympad"><a href="../../com/appbrain/AdService.html#showOfferWall(android.content.Context)">showOfferWall</a></span>(Context context)</nobr>
         
         <div class="jd-descrdiv">Shows the offer wall with the list of promoted apps.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            AdListAdapter</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../com/appbrain/AdService.html#wrapListAdapter(android.content.Context, android.widget.ListAdapter, int, int, int, int)">wrapListAdapter</a></span>(Context context, ListAdapter adapter, int layoutId, int iconId, int titleId, int descriptionId)</nobr>
+        
+        <div class="jd-descrdiv">Wraps your ListAdapter in an AdListAdapter, which automatically inserts
+ ads in your ListView.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            AdListAdapter</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../com/appbrain/AdService.html#wrapListAdapter(android.content.Context, android.widget.ListAdapter, com.appbrain.AdListAdapter.AdLayoutCreator, int, int, int)">wrapListAdapter</a></span>(Context context, ListAdapter adapter, AdListAdapter.AdLayoutCreator layoutCreator, int iconId, int titleId, int descriptionId)</nobr>
+        
+        <div class="jd-descrdiv">Wraps your ListAdapter in an AdListAdapter, which automatically inserts
+ ads in your ListView.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            AdListAdapter</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../com/appbrain/AdService.html#wrapListAdapter(android.content.Context, android.widget.ListAdapter)">wrapListAdapter</a></span>(Context context, ListAdapter adapter)</nobr>
+        
+        <div class="jd-descrdiv">Wraps your ListAdapter in an AdListAdapter, which automatically inserts
+ ads in your ListView.</div>
   
   </td></tr>
 
@@ -523,6 +621,56 @@
       <ul class="nolist"><li>an internationalized String which can be used for a button or
          menu item which opens the offer wall. In English this is
          "More free apps".
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="maybeShowInterstitial(android.content.Context, com.appbrain.AdOptions)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        boolean
+      </span>
+      <span class="sympad">maybeShowInterstitial</span>
+      <span class="normal">(Context context, <a href="../../com/appbrain/AdOptions.html">AdOptions</a> options)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Shows an interstitial activity sometimes (at most once per 3 days by default, and only when
+ there is an internet connection).</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>context</td>
+          <td>The current context</td>
+        </tr>
+        <tr>
+          <th>options</td>
+          <td>Interstitial options</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>true if the interstitial was shown
 </li></ul>
   </div>
 
@@ -716,6 +864,55 @@
 </div>
 
 
+<A NAME="showInterstitial(android.content.Context, com.appbrain.AdOptions)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        boolean
+      </span>
+      <span class="sympad">showInterstitial</span>
+      <span class="normal">(Context context, <a href="../../com/appbrain/AdOptions.html">AdOptions</a> options)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Shows the interstitial (if there is an internet connection).</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>context</td>
+          <td>The current context</td>
+        </tr>
+        <tr>
+          <th>options</td>
+          <td>Interstitial options</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>true if the interstitial was shown
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
 <A NAME="showInterstitial(android.content.Context)"></A>
 
 <div class="jd-details api apilevel-"> 
@@ -799,6 +996,204 @@
 </td>
         </tr>
       </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="wrapListAdapter(android.content.Context, android.widget.ListAdapter, int, int, int, int)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        AdListAdapter
+      </span>
+      <span class="sympad">wrapListAdapter</span>
+      <span class="normal">(Context context, ListAdapter adapter, int layoutId, int iconId, int titleId, int descriptionId)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Wraps your ListAdapter in an AdListAdapter, which automatically inserts
+ ads in your ListView.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>context</td>
+          <td>the current Context.</td>
+        </tr>
+        <tr>
+          <th>adapter</td>
+          <td>your own ListAdapter</td>
+        </tr>
+        <tr>
+          <th>layoutId</td>
+          <td>the ID of your custom layout view used to display ads.</td>
+        </tr>
+        <tr>
+          <th>iconId</td>
+          <td>the ID of an ImageView inside your custom layout, to display
+            the ad's icon.</td>
+        </tr>
+        <tr>
+          <th>titleId</td>
+          <td>the ID of a TextView inside your custom layout, to display the
+            ad's title.</td>
+        </tr>
+        <tr>
+          <th>descriptionId</td>
+          <td>the ID of a TextView inside your custom layout, to display the
+            ad's description.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>the AdListAdapter which wraps your own adapter. In your
+         ListView's OnItemClickListener you can use the AdListAdapter to
+         determine the actual position of the item which was clicked, by
+         calling AdListAdapter.getItemPosition().
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="wrapListAdapter(android.content.Context, android.widget.ListAdapter, com.appbrain.AdListAdapter.AdLayoutCreator, int, int, int)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        AdListAdapter
+      </span>
+      <span class="sympad">wrapListAdapter</span>
+      <span class="normal">(Context context, ListAdapter adapter, AdListAdapter.AdLayoutCreator layoutCreator, int iconId, int titleId, int descriptionId)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Wraps your ListAdapter in an AdListAdapter, which automatically inserts
+ ads in your ListView.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>context</td>
+          <td>the current Context.</td>
+        </tr>
+        <tr>
+          <th>adapter</td>
+          <td>your own ListAdapter</td>
+        </tr>
+        <tr>
+          <th>layoutCreator</td>
+          <td>Your custom implementation of AdLayoutCreator, which will be
+            used to create the view to display ads.</td>
+        </tr>
+        <tr>
+          <th>iconId</td>
+          <td>the ID of an ImageView inside your custom layout, to display
+            the ad's icon.</td>
+        </tr>
+        <tr>
+          <th>titleId</td>
+          <td>the ID of a TextView inside your custom layout, to display the
+            ad's title.</td>
+        </tr>
+        <tr>
+          <th>descriptionId</td>
+          <td>the ID of a TextView inside your custom layout, to display the
+            ad's description.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>the AdListAdapter which wraps your own adapter. In your
+         ListView's OnItemClickListener you can use the AdListAdapter to
+         determine the actual position of the item which was clicked, by
+         calling AdListAdapter.getItemPosition().
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="wrapListAdapter(android.content.Context, android.widget.ListAdapter)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        AdListAdapter
+      </span>
+      <span class="sympad">wrapListAdapter</span>
+      <span class="normal">(Context context, ListAdapter adapter)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Wraps your ListAdapter in an AdListAdapter, which automatically inserts
+ ads in your ListView.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>context</td>
+          <td>the current Context.</td>
+        </tr>
+        <tr>
+          <th>adapter</td>
+          <td>your own ListAdapter</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>the AdListAdapter which wraps your own adapter. In your
+         ListView's OnItemClickListener you can use the AdListAdapter to
+         determine the actual position of the item which was clicked, by
+         calling AdListAdapter.getItemPosition().
+</li></ul>
   </div>
 
     </div>
