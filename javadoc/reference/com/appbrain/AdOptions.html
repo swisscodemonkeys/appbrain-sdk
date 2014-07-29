@@ -58,7 +58,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico" />
 <title>
 
-  BannerListener - AppBrain AppLift Javadoc
+  AdOptions - AppBrain AppLift Javadoc
 
 
 | AppBrain AppLift SDK
@@ -138,7 +138,7 @@
           <li class="api apilevel-">AdListAdapter.AdLayoutCreator</li>
           <li class="api apilevel-"><a href="../../com/appbrain/AdService.html">AdService</a></li>
           <li class="api apilevel-"><a href="../../com/appbrain/AdvertiserService.html">AdvertiserService</a></li>
-          <li class="selected api apilevel-"><a href="../../com/appbrain/BannerListener.html">BannerListener</a></li>
+          <li class="api apilevel-"><a href="../../com/appbrain/BannerListener.html">BannerListener</a></li>
           <li class="api apilevel-">InterstitialListener</li>
           <li class="api apilevel-"><a href="../../com/appbrain/RemoteSettings.html">RemoteSettings</a></li>
       </ul>
@@ -146,7 +146,7 @@
               
     <li><h2>Classes</h2>
       <ul>
-          <li class="api apilevel-"><a href="../../com/appbrain/AdOptions.html">AdOptions</a></li>
+          <li class="selected api apilevel-"><a href="../../com/appbrain/AdOptions.html">AdOptions</a></li>
           <li class="api apilevel-"><a href="../../com/appbrain/AppBrain.html">AppBrain</a></li>
           <li class="api apilevel-"><a href="../../com/appbrain/AppBrainBanner.html">AppBrainBanner</a></li>
           <li class="api apilevel-"><a href="../../com/appbrain/ReferrerReceiver.html">ReferrerReceiver</a></li>
@@ -193,9 +193,45 @@
 
 
 
+  
+   
+  
+  
+  
+  
+
+  
+  
+  
+  
+
 
 <div class="sum-details-links">
 
+
+Summary:
+
+
+
+
+
+
+
+
+
+  <a href="#pubctors">Ctors</a>
+  
+
+
+
+  &#124; <a href="#pubmethods">Methods</a>
+  
+
+
+
+  &#124; <a href="#inhmethods">Inherited Methods</a>
+
+&#124; <a href="#" onclick="return toggleAllClassInherited()" id="toggleAllClassInherited">[Expand All]</a>
 
 </div><!-- end sum-details-links -->
 <div class="api-level">
@@ -216,12 +252,23 @@
      
      
     
-    interface
-<h1>BannerListener</h1>
+    class
+<h1>AdOptions</h1>
 
 
 
   
+    extends Object<br/>
+  
+  
+  
+
+  
+  
+      implements 
+      
+        Serializable 
+      
   
   
 
@@ -236,7 +283,15 @@
 
     <tr>
          	
-        <td colspan="1" class="jd-inheritance-class-cell">com.appbrain.BannerListener</td>
+        <td colspan="2" class="jd-inheritance-class-cell">java.lang.Object</td>
+    </tr>
+    
+
+    <tr>
+        
+            <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
+         	
+        <td colspan="1" class="jd-inheritance-class-cell">com.appbrain.AdOptions</td>
     </tr>
     
 
@@ -252,10 +307,9 @@
 
 
 <h2>Class Overview</h2>
-<p>This is a listener interface to be notified when someone clicked the AppBrain banner.
- This is purely for reporting purposes, the implementation takes care of opening the offerwall etc. 
+<p>Used to customize interstitials.
  
- This interface is only available in the AppLift SDK.
+ This class is only available in the AppLift SDK.
 </p>
 
 
@@ -306,6 +360,31 @@
 
 
 
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<table id="pubctors" class="jd-sumtable"><tr><th colspan="12">Public Constructors</th></tr>
+
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            </nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../com/appbrain/AdOptions.html#AdOptions()">AdOptions</a></span>()</nobr>
+        
+  </td></tr>
+
+
+
+</table>
+
+
 
 
 
@@ -318,17 +397,17 @@
 	 
     <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
-            abstract
             
             
             
             
-            void</nobr>
+            
+            InterstitialListener</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../com/appbrain/BannerListener.html#onAdRequestDone(boolean)">onAdRequestDone</a></span>(boolean adAvailable)</nobr>
+        <span class="sympad"><a href="../../com/appbrain/AdOptions.html#getListener()">getListener</a></span>()</nobr>
         
-        <div class="jd-descrdiv">Gets called after a call to requestAd().</div>
+        <div class="jd-descrdiv">Get the currently set listener.</div>
   
   </td></tr>
 
@@ -336,7 +415,7 @@
 	 
     <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
-            abstract
+            
             
             
             
@@ -344,9 +423,9 @@
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../com/appbrain/BannerListener.html#onClick()">onClick</a></span>()</nobr>
+        <span class="sympad"><a href="../../com/appbrain/AdOptions.html#setListener(com.appbrain.InterstitialListener)">setListener</a></span>(InterstitialListener listener)</nobr>
         
-        <div class="jd-descrdiv">Gets called when a banner receives a click from the user.</div>
+        <div class="jd-descrdiv">Set a listener class to listener for open, close and click events of interstitials.</div>
   
   </td></tr>
 
@@ -358,6 +437,186 @@
 
 
 
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="inhmethods" class="jd-sumtable"><tr><th>
+  <a href="#" class="toggle-all" onclick="return toggleAllInherited(this, null)">[Expand]</a>
+  <div style="clear:left;">Inherited Methods</div></th></tr>
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-java.lang.Object" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-java.lang.Object-trigger"
+          src="../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From class
+
+  java.lang.Object
+
+<div id="inherited-methods-java.lang.Object">
+  <div id="inherited-methods-java.lang.Object-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-java.lang.Object-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            boolean</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">equals</span>(Object arg0)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            Class&lt;?&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">getClass</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            int</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">hashCode</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">notify</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">notifyAll</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            String</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">toString</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">wait</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">wait</span>(long arg0, int arg1)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">wait</span>(long arg0)</nobr>
+        
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+
+</table>
 
 
 </div><!-- jd-descr (summary) -->
@@ -386,6 +645,44 @@
 <!-- Public ctors -->
 
 
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<h2>Public Constructors</h2>
+
+
+
+<A NAME="AdOptions()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        
+      </span>
+      <span class="sympad">AdOptions</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+
+
 
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <!-- Protected ctors -->
@@ -399,7 +696,7 @@
 
 
 
-<A NAME="onAdRequestDone(boolean)"></A>
+<A NAME="getListener()"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -407,53 +704,11 @@
         public 
          
          
-        abstract 
          
-        void
+         
+        InterstitialListener
       </span>
-      <span class="sympad">onAdRequestDone</span>
-      <span class="normal">(boolean adAvailable)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Gets called after a call to requestAd().
- The thread on which this method gets called is unspecified (it may be the UI thread or it may not be). </p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>adAvailable</td>
-          <td>Whether there's an ad available to serve or not.
-</td>
-        </tr>
-      </table>
-  </div>
-
-    </div>
-</div>
-
-
-<A NAME="onClick()"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-        abstract 
-         
-        void
-      </span>
-      <span class="sympad">onClick</span>
+      <span class="sympad">getListener</span>
       <span class="normal">()</span>
     </h4>
       <div class="api-level">
@@ -466,8 +721,38 @@
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Gets called when a banner receives a click from the user.
- This method gets called on the UI thread.
+  <div class="jd-tagdata jd-tagdescr"><p>Get the currently set listener.</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="setListener(com.appbrain.InterstitialListener)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">setListener</span>
+      <span class="normal">(InterstitialListener listener)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Set a listener class to listener for open, close and click events of interstitials.
 </p></div>
 
     </div>

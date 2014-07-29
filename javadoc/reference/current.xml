@@ -1,6 +1,49 @@
 <api>
 <package name="com.appbrain"
 >
+<class name="AdOptions"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="java.io.Serializable">
+</implements>
+<constructor name="AdOptions"
+ type="com.appbrain.AdOptions"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="getListener"
+ return="com.appbrain.InterstitialListener"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setListener"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="listener" type="com.appbrain.InterstitialListener">
+</parameter>
+</method>
+</class>
 <interface name="AdService"
  abstract="true"
  static="false"
@@ -32,6 +75,21 @@
  visibility="public"
 >
 <parameter name="context" type="android.content.Context">
+</parameter>
+</method>
+<method name="maybeShowInterstitial"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+<parameter name="options" type="com.appbrain.AdOptions">
 </parameter>
 </method>
 <method name="setOfferWallClickListener"
@@ -90,6 +148,21 @@
 <parameter name="context" type="android.content.Context">
 </parameter>
 </method>
+<method name="showInterstitial"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+<parameter name="options" type="com.appbrain.AdOptions">
+</parameter>
+</method>
 <method name="showOfferWall"
  return="void"
  abstract="true"
@@ -101,6 +174,67 @@
  visibility="public"
 >
 <parameter name="context" type="android.content.Context">
+</parameter>
+</method>
+<method name="wrapListAdapter"
+ return="com.appbrain.AdListAdapter"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+<parameter name="adapter" type="android.widget.ListAdapter">
+</parameter>
+</method>
+<method name="wrapListAdapter"
+ return="com.appbrain.AdListAdapter"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+<parameter name="adapter" type="android.widget.ListAdapter">
+</parameter>
+<parameter name="layoutId" type="int">
+</parameter>
+<parameter name="iconId" type="int">
+</parameter>
+<parameter name="titleId" type="int">
+</parameter>
+<parameter name="descriptionId" type="int">
+</parameter>
+</method>
+<method name="wrapListAdapter"
+ return="com.appbrain.AdListAdapter"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+<parameter name="adapter" type="android.widget.ListAdapter">
+</parameter>
+<parameter name="layoutCreator" type="com.appbrain.AdListAdapter.AdLayoutCreator">
+</parameter>
+<parameter name="iconId" type="int">
+</parameter>
+<parameter name="titleId" type="int">
+</parameter>
+<parameter name="descriptionId" type="int">
 </parameter>
 </method>
 </interface>
