@@ -154,6 +154,11 @@
     </li>
               
               
+    <li><h2>Enums</h2>
+      <ul>
+          <li class="api apilevel-"><a href="../../com/appbrain/AppBrainBanner.BannerSize.html">AppBrainBanner.BannerSize</a></li>
+      </ul>
+    </li>
               
               
             </ul><br/>
@@ -319,10 +324,10 @@ Summary:
 
 <h2>Class Overview</h2>
 <p>This class receives the install string from the Android market.
- 
+
  It should be included in the AndroidManifest (within the application tag)
  like this:
- 
+
  <pre>
  <code>&lt;receiver android:name="com.appbrain.ReferrerReceiver" android:exported="true"&gt;
    &lt;intent-filter&gt; 
@@ -331,13 +336,13 @@ Summary:
  &lt;/receiver&gt;
  </code>
  </pre>
- 
+
  If you have custom receivers that you also want to have notified, you can
  specify them using meta-data parameters, like for instance in the following
  snippet, where both the analytics and AdMob install receivers are notified of
  a referrer as well (android.name can be any value as long as it starts with
  "forward."):
- 
+
  <pre>
  <code>&lt;receiver android:name="com.appbrain.ReferrerReceiver" android:exported="true"&gt;
    &lt;intent-filter&gt; 
@@ -443,7 +448,7 @@ Summary:
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../com/appbrain/ReferrerReceiver.html#onReceive(android.content.Context, android.content.Intent)">onReceive</a></span>(Context arg0, Intent arg1)</nobr>
+        <span class="sympad"><a href="../../com/appbrain/ReferrerReceiver.html#onReceive(android.content.Context, android.content.Intent)">onReceive</a></span>(Context context, Intent intent)</nobr>
         
         <div class="jd-descrdiv">Receive the referrer String from the Android market.</div>
   
@@ -923,7 +928,7 @@ From class
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">wait</span>()</nobr>
+        <span class="sympad">wait</span>(long arg0, int arg1)</nobr>
         
   </td></tr>
 
@@ -939,7 +944,7 @@ From class
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">wait</span>(long arg0, int arg1)</nobr>
+        <span class="sympad">wait</span>(long arg0)</nobr>
         
   </td></tr>
 
@@ -955,7 +960,7 @@ From class
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">wait</span>(long arg0)</nobr>
+        <span class="sympad">wait</span>()</nobr>
         
   </td></tr>
 
@@ -1059,7 +1064,7 @@ From class
         void
       </span>
       <span class="sympad">onReceive</span>
-      <span class="normal">(Context arg0, Intent arg1)</span>
+      <span class="normal">(Context context, Intent intent)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1103,13 +1108,13 @@ From class
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Retrieve the saved referrer String from the Android market. </p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Retrieve the saved referrer String from the Android market.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
           <th>context</td>
-          <td>The current Android context</td>
+          <td>The current Android Context</td>
         </tr>
       </table>
   </div>

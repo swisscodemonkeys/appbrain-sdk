@@ -21,6 +21,12 @@ Recent changes
 
 Every release contains bugfixes and monetizations improvements.
 
+V10.3 (October 14th, 2014):
+
+  * Improvements to banner monetization
+  * Automatically scale up banner size on tablets ("SMART / RESPONSIVE" banner size).
+  * Give more control over banner size using AppBrainBanner.setSize(DEFAULT | LARGE | RESPONSIVE).
+
 V10.2 (July 29th, 2014):
 
   * Added instream ads

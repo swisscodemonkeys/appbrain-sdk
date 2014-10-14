@@ -5,8 +5,9 @@ var DATA = [
       { id:3, label:"com.appbrain.AdvertiserService", link:"com/appbrain/AdvertiserService.html", type:"class" },
       { id:4, label:"com.appbrain.AppBrain", link:"com/appbrain/AppBrain.html", type:"class" },
       { id:5, label:"com.appbrain.AppBrainBanner", link:"com/appbrain/AppBrainBanner.html", type:"class" },
-      { id:6, label:"com.appbrain.BannerListener", link:"com/appbrain/BannerListener.html", type:"class" },
-      { id:7, label:"com.appbrain.ReferrerReceiver", link:"com/appbrain/ReferrerReceiver.html", type:"class" },
-      { id:8, label:"com.appbrain.RemoteSettings", link:"com/appbrain/RemoteSettings.html", type:"class" }
+      { id:6, label:"com.appbrain.AppBrainBanner.BannerSize", link:"com/appbrain/AppBrainBanner.BannerSize.html", type:"class" },
+      { id:7, label:"com.appbrain.BannerListener", link:"com/appbrain/BannerListener.html", type:"class" },
+      { id:8, label:"com.appbrain.ReferrerReceiver", link:"com/appbrain/ReferrerReceiver.html", type:"class" },
+      { id:9, label:"com.appbrain.RemoteSettings", link:"com/appbrain/RemoteSettings.html", type:"class" }
 
     ];

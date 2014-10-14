@@ -154,6 +154,11 @@
     </li>
               
               
+    <li><h2>Enums</h2>
+      <ul>
+          <li class="api apilevel-"><a href="../../com/appbrain/AppBrainBanner.BannerSize.html">AppBrainBanner.BannerSize</a></li>
+      </ul>
+    </li>
               
               
             </ul><br/>
@@ -252,7 +257,7 @@
 
 
 <h2>Class Overview</h2>
-<p>ServerValues is a collection of values that can be sent back by AppBrain's
+<p>RemoteSettings is a collection of values that can be sent back by AppBrain's
  servers to your Android app.</p>
 
 
@@ -323,9 +328,10 @@
             String</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../com/appbrain/RemoteSettings.html#get(java.lang.String)">get</a></span>(String key)</nobr>
+        <span class="sympad"><a href="../../com/appbrain/RemoteSettings.html#get(java.lang.String, java.lang.String)">get</a></span>(String key, String defaultValue)</nobr>
         
-        <div class="jd-descrdiv">Return a value that was fetched from the server, if present.</div>
+        <div class="jd-descrdiv">Return a value that was fetched from the server, or a default value if
+ none was present.</div>
   
   </td></tr>
 
@@ -341,10 +347,9 @@
             String</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../com/appbrain/RemoteSettings.html#get(java.lang.String, java.lang.String)">get</a></span>(String key, String defaultValue)</nobr>
+        <span class="sympad"><a href="../../com/appbrain/RemoteSettings.html#get(java.lang.String)">get</a></span>(String key)</nobr>
         
-        <div class="jd-descrdiv">Return a value that was fetched from the server, or a default value if
- none was present.</div>
+        <div class="jd-descrdiv">Return a value that was fetched from the server, if present.</div>
   
   </td></tr>
 
@@ -397,51 +402,6 @@
 
 
 
-<A NAME="get(java.lang.String)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-        abstract 
-         
-        String
-      </span>
-      <span class="sympad">get</span>
-      <span class="normal">(String key)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Return a value that was fetched from the server, if present.</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>key</td>
-          <td>The name of the value.</td>
-        </tr>
-      </table>
-  </div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>The value that was set on the server, or null if there was none.
-</li></ul>
-  </div>
-
-    </div>
-</div>
-
-
 <A NAME="get(java.lang.String, java.lang.String)"></A>
 
 <div class="jd-details api apilevel-"> 
@@ -482,6 +442,51 @@
       <h5 class="jd-tagtitle">Returns</h5>
       <ul class="nolist"><li>The value that was set on the server, or the default value if
          there was none.
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="get(java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        String
+      </span>
+      <span class="sympad">get</span>
+      <span class="normal">(String key)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Return a value that was fetched from the server, if present.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>key</td>
+          <td>The name of the value.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>The value that was set on the server, or null if there was none.
 </li></ul>
   </div>
 

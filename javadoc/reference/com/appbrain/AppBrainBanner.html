@@ -154,6 +154,11 @@
     </li>
               
               
+    <li><h2>Enums</h2>
+      <ul>
+          <li class="api apilevel-"><a href="../../com/appbrain/AppBrainBanner.BannerSize.html">AppBrainBanner.BannerSize</a></li>
+      </ul>
+    </li>
               
               
             </ul><br/>
@@ -268,12 +273,15 @@
 
 Summary:
 
+  <a href="#nestedclasses">Nested Classes</a>
+  
 
 
 
 
 
-  <a href="#inhconstants">Inherited Constants</a>
+
+  &#124; <a href="#inhconstants">Inherited Constants</a>
   
 
 
@@ -425,8 +433,6 @@ Summary:
  </pre>
       
  See the functions setTitleIndex, setButtonTextIndex, setDesign and setColors for more information.
- 
- This class is only available in the AppLift SDK.
 </p>
 
 
@@ -454,6 +460,26 @@ Summary:
 
 
 <h2>Summary</h2>
+
+
+
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<table id="nestedclasses" class="jd-sumtable"><tr><th colspan="12">Nested Classes</th></tr>
+
+
+  
+    <tr class="alt-color api apilevel-" >
+      <td class="jd-typecol"><nobr>
+        
+         
+         
+        
+        enum</nobr></td>
+      <td class="jd-linkcol"><a href="../../com/appbrain/AppBrainBanner.BannerSize.html">AppBrainBanner.BannerSize</a></td>
+      <td class="jd-descrcol" width="100%">&nbsp;</td>
+    </tr>
+    
+    
 
 
 
@@ -1492,6 +1518,22 @@ android.view.View
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../com/appbrain/AppBrainBanner.html#setSize(com.appbrain.AppBrainBanner.BannerSize)">setSize</a></span>(<a href="../../com/appbrain/AppBrainBanner.BannerSize.html">AppBrainBanner.BannerSize</a> size)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../com/appbrain/AppBrainBanner.html#setTitleIndex(int)">setTitleIndex</a></span>(int index)</nobr>
         
         <div class="jd-descrdiv">Set the title to use.</div>
@@ -1500,7 +1542,7 @@ android.view.View
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -1874,7 +1916,7 @@ From class
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">addView</span>(View arg0, int arg1, ViewGroup.LayoutParams arg2)</nobr>
+        <span class="sympad">addView</span>(View arg0, ViewGroup.LayoutParams arg1)</nobr>
         
   </td></tr>
 
@@ -1890,7 +1932,7 @@ From class
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">addView</span>(View arg0, ViewGroup.LayoutParams arg1)</nobr>
+        <span class="sympad">addView</span>(View arg0, int arg1)</nobr>
         
   </td></tr>
 
@@ -1906,7 +1948,7 @@ From class
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">addView</span>(View arg0, int arg1)</nobr>
+        <span class="sympad">addView</span>(View arg0, int arg1, ViewGroup.LayoutParams arg2)</nobr>
         
   </td></tr>
 
@@ -4508,7 +4550,7 @@ From class
             Bitmap</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">getDrawingCache</span>(boolean arg0)</nobr>
+        <span class="sympad">getDrawingCache</span>()</nobr>
         
   </td></tr>
 
@@ -4524,7 +4566,7 @@ From class
             Bitmap</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">getDrawingCache</span>()</nobr>
+        <span class="sympad">getDrawingCache</span>(boolean arg0)</nobr>
         
   </td></tr>
 
@@ -6092,7 +6134,7 @@ From class
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">invalidate</span>(Rect arg0)</nobr>
+        <span class="sympad">invalidate</span>(int arg0, int arg1, int arg2, int arg3)</nobr>
         
   </td></tr>
 
@@ -6108,7 +6150,7 @@ From class
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">invalidate</span>(int arg0, int arg1, int arg2, int arg3)</nobr>
+        <span class="sympad">invalidate</span>()</nobr>
         
   </td></tr>
 
@@ -6124,7 +6166,7 @@ From class
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">invalidate</span>()</nobr>
+        <span class="sympad">invalidate</span>(Rect arg0)</nobr>
         
   </td></tr>
 
@@ -7244,7 +7286,7 @@ From class
             boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">performHapticFeedback</span>(int arg0, int arg1)</nobr>
+        <span class="sympad">performHapticFeedback</span>(int arg0)</nobr>
         
   </td></tr>
 
@@ -7260,7 +7302,7 @@ From class
             boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">performHapticFeedback</span>(int arg0)</nobr>
+        <span class="sympad">performHapticFeedback</span>(int arg0, int arg1)</nobr>
         
   </td></tr>
 
@@ -7542,13 +7584,13 @@ From class
         <td class="jd-typecol"><nobr>
             
             
-            
+            final
             
             
             boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">requestFocus</span>(int arg0, Rect arg1)</nobr>
+        <span class="sympad">requestFocus</span>(int arg0)</nobr>
         
   </td></tr>
 
@@ -7564,7 +7606,7 @@ From class
             boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">requestFocus</span>(int arg0)</nobr>
+        <span class="sympad">requestFocus</span>()</nobr>
         
   </td></tr>
 
@@ -7574,13 +7616,13 @@ From class
         <td class="jd-typecol"><nobr>
             
             
-            final
+            
             
             
             boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">requestFocus</span>()</nobr>
+        <span class="sympad">requestFocus</span>(int arg0, Rect arg1)</nobr>
         
   </td></tr>
 
@@ -7628,7 +7670,7 @@ From class
             boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">requestRectangleOnScreen</span>(Rect arg0)</nobr>
+        <span class="sympad">requestRectangleOnScreen</span>(Rect arg0, boolean arg1)</nobr>
         
   </td></tr>
 
@@ -7644,7 +7686,7 @@ From class
             boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">requestRectangleOnScreen</span>(Rect arg0, boolean arg1)</nobr>
+        <span class="sympad">requestRectangleOnScreen</span>(Rect arg0)</nobr>
         
   </td></tr>
 
@@ -9622,7 +9664,7 @@ From class
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">wait</span>()</nobr>
+        <span class="sympad">wait</span>(long arg0, int arg1)</nobr>
         
   </td></tr>
 
@@ -9638,7 +9680,7 @@ From class
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">wait</span>(long arg0, int arg1)</nobr>
+        <span class="sympad">wait</span>(long arg0)</nobr>
         
   </td></tr>
 
@@ -9654,7 +9696,7 @@ From class
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">wait</span>(long arg0)</nobr>
+        <span class="sympad">wait</span>()</nobr>
         
   </td></tr>
 
@@ -10913,6 +10955,37 @@ From interface
       </span>
       <span class="sympad">setIsMediatedBanner</span>
       <span class="normal">(boolean isMediated, String name)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<A NAME="setSize(com.appbrain.AppBrainBanner.BannerSize)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">setSize</span>
+      <span class="normal">(<a href="../../com/appbrain/AppBrainBanner.BannerSize.html">AppBrainBanner.BannerSize</a> size)</span>
     </h4>
       <div class="api-level">
         <div>

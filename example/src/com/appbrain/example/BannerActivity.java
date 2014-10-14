@@ -131,6 +131,5 @@ public class BannerActivity extends Activity {
         banner.setDesign(design.getSelectedItemPosition());
         banner.setColors(color.getSelectedItemPosition());
         container.addView(banner);
-        banner.requestAd();
     }
 }
