@@ -21,6 +21,10 @@ Recent changes
 
 Every release contains bugfixes and monetizations improvements.
 
+V10.31 (October 14th, 2014):
+
+  * Small fix for Admob mediation
+
 V10.3 (October 14th, 2014):
 
   * Improvements to banner monetization
