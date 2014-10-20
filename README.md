@@ -21,9 +21,9 @@ Recent changes
 
 Every release contains bugfixes and monetizations improvements.
 
-V10.31 (October 14th, 2014):
+V10.31 & V10.32 (October 14th & 20th, 2014):
 
-  * Small fix for Admob mediation
+  * Small fixes for Admob mediation
 
 V10.3 (October 14th, 2014):
 
