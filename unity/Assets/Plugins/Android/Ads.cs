@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2012 AppBrain
+ * Copyright (C) 2012-2014 AppBrain
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,17 +23,13 @@ namespace AppLift {
 	public class Ads
 	{
 		private static AndroidJavaClass appbrainUnity = new AndroidJavaClass("com.appbrain.AppBrainUnity");
-		private AndroidJavaObject ads;
 		
-		public Ads(AndroidJavaObject ads)
-		{
-			this.ads = ads;
-		}
+		public Ads() {}
 		
 		public void ShowOfferWall() {
 			try {
 				SetKillWhenDone(false);
-				ads.Call("showOfferWall", AppBrain.GetCurrentActivity());
+				appbrainUnity.CallStatic("showOfferWall", AppBrain.GetCurrentActivity());
 			} catch (Exception e) {
 				Debug.LogError(e);
 			}
@@ -42,7 +38,7 @@ namespace AppLift {
 		public bool ShowInterstitial(bool quitWhenDone) {
 			try {
 				SetKillWhenDone(quitWhenDone);
-				return ads.Call<bool>("showInterstitial", AppBrain.GetCurrentActivity());
+				return appbrainUnity.CallStatic<bool>("showInterstitial", AppBrain.GetCurrentActivity());
 			} catch (Exception e) {
 				Debug.LogError(e);
 				return false;
@@ -52,11 +48,20 @@ namespace AppLift {
 		public bool MaybeShowInterstitial(bool quitWhenDone) {
 			try {
 				SetKillWhenDone(quitWhenDone);
-				return ads.Call<bool>("maybeShowInterstitial", AppBrain.GetCurrentActivity());
+				return appbrainUnity.CallStatic<bool>("maybeShowInterstitial", AppBrain.GetCurrentActivity());
 			} catch (Exception e) {
 				Debug.LogError(e);
 				return false;
 			}
+		}
+
+		public void OfferwallButtonClick() {
+		       try {
+				SetKillWhenDone(false);
+				appbrainUnity.CallStatic("offerwallButtonClick", AppBrain.GetCurrentActivity());
+			} catch (Exception e) {
+				Debug.LogError(e);
+			}								
 		}
 		
 		private static void SetKillWhenDone(bool killWhenDone) {

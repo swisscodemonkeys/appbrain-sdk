@@ -4,7 +4,7 @@ using AppLift;
 
 public class main : MonoBehaviour {
 	void Start () {
-    	AppBrain.Init();
+    	     AppBrain.Init();
 	}
 
 	void Update () {

@@ -1,5 +1,8 @@
 package com.appbrain.example;
 
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
@@ -10,8 +13,12 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
 
+import com.appbrain.AdOptions;
 import com.appbrain.AdService;
 import com.appbrain.AppBrain;
+import com.appbrain.AppBrainUserData;
+import com.appbrain.AppBrainUserData.Gender;
+import com.appbrain.InterstitialListener;
 import com.appbrain.RemoteSettings;
 
 public class ExampleActivity extends Activity {
@@ -19,8 +26,15 @@ public class ExampleActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        
         AppBrain.init(this);
+        // Say we know here that the user is male and is 35 years old, then we can pass this to AppBrain:
+        Calendar calendar = new GregorianCalendar();
+        calendar.add(-35, Calendar.YEAR);
+
+        AppBrain.getAds().setUserData(
+            AppBrainUserData.create().setGender(Gender.MALE).setBirthDate(calendar.getTime()));
+
         setContentView(R.layout.main);
 
         final RemoteSettings settings = AppBrain.getSettings();
@@ -49,11 +63,32 @@ public class ExampleActivity extends Activity {
             }
         });
         
+        final AdOptions options = new AdOptions();
+        options.setListener(new InterstitialListener() {
+            @Override
+            public void onPresented() {
+                Toast.makeText(ExampleActivity.this,
+                    "Interstitial presented", Toast.LENGTH_SHORT).show();   
+            }
+            
+            @Override
+            public void onDismissed(boolean arg0) {
+                Toast.makeText(ExampleActivity.this,
+                    "Interstitial dismissed " + arg0, Toast.LENGTH_SHORT).show();
+            }
+            
+            @Override
+            public void onClick() {
+                Toast.makeText(ExampleActivity.this,
+                    "Interstitial clicked", Toast.LENGTH_SHORT).show();
+            }
+        });
+        
         findViewById(R.id.show_interstitial).setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                if (!ads.showInterstitial(ExampleActivity.this)) {
+                if (!ads.showInterstitial(ExampleActivity.this, options)) {
                     Toast.makeText(ExampleActivity.this,
                         "Not showing, no internet connection?", Toast.LENGTH_LONG).show();
                 }
@@ -80,6 +115,7 @@ public class ExampleActivity extends Activity {
     }
 
     // @Override
+    @Override
     public void onBackPressed() {
         AppBrain.getAds().maybeShowInterstitial(this);
         finish();

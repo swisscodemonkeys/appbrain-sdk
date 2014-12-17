@@ -122,6 +122,19 @@
 <parameter name="menuItem" type="android.view.MenuItem">
 </parameter>
 </method>
+<method name="setUserData"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="data" type="com.appbrain.AppBrainUserData">
+</parameter>
+</method>
 <method name="shouldShowInterstitial"
  return="boolean"
  abstract="true"

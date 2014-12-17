@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2012 AppBrain
+ * Copyright (C) 2012-2014 AppBrain
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,7 +23,7 @@ namespace AppLift {
 	public class AppBrain
 	{
 		private static bool initialized = false;
-		private static AndroidJavaClass appbrain = new AndroidJavaClass("com.appbrain.AppBrain");
+		private static AndroidJavaClass appbrainUnity = new AndroidJavaClass("com.appbrain.AppBrainUnity");
 		private static AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
 		
 		public static void Init() {
@@ -31,7 +31,7 @@ namespace AppLift {
 				return;
 			}
 			try {
-				appbrain.CallStatic("init", GetCurrentActivity());
+				appbrainUnity.CallStatic("init", GetCurrentActivity());
 				initialized = true;
 			} catch (Exception e) {
 				Debug.LogError(e);
@@ -39,24 +39,17 @@ namespace AppLift {
 		}
 		
 		public static Ads GetAds() {
-			try {
-				Ads ads = new Ads(appbrain.CallStatic<AndroidJavaObject>("getAds"));
-				return ads;
-			} catch (Exception e) {
-				Debug.LogError(e);
-				return new Ads(null);
-			}
+		       return new Ads();
 		}
 
 		public static RemoteSettings GetSettings() {
 			try {
-				return new RemoteSettings(appbrain.CallStatic<AndroidJavaObject>("getSettings"));
+				return new RemoteSettings(appbrainUnity.CallStatic<AndroidJavaObject>("getSettings"));
 			} catch (Exception e) {
 				Debug.LogError(e);
 				return new RemoteSettings(null);
 			}
 		}
-	
 		
 		public static AndroidJavaObject GetCurrentActivity() {
 			try {
