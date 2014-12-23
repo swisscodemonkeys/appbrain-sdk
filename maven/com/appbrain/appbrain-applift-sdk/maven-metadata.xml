@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.appbrain</groupId>
+  <artifactId>appbrain-applift-sdk</artifactId>
+  <version>10.41</version>
+  <versioning>
+    <versions>
+      <version>10.41</version>
+    </versions>
+    <lastUpdated>20141223142956</lastUpdated>
+  </versioning>
+</metadata>
