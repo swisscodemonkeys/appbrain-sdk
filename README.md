@@ -21,7 +21,12 @@ Recent changes
 
 Every release contains bugfixes and monetizations improvements.
 
-V10.4
+V10.41 (December 23rd, 2014):
+
+  * Easy Gradle/Android studio integration with maven repository. [Documentation](http://www.appbrain.com/info/sdk-docs/gettingstarted.html)
+  * Admob mediation adapter is now integrated in the main SDK jar. [AdMob medation documentation](http://www.appbrain.com/info/sdk-docs/admob.html)
+
+V10.4 (December 17th, 2014):
 
   * Added AppBrain.getAds().setUserData(AppBrainUserData) to communicate demographic information and location for increased monetization. [Documentation](http://www.appbrain.com/info/sdk-docs/javadoc/com/appbrain/AppBrainUserData.html)
   * Fixes for Unity, and "More Apps" button click listener. [Unity documentation](http://www.appbrain.com/info/sdk-docs/unity.html)
