@@ -26,11 +26,11 @@ public class ExampleActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        
+
         AppBrain.init(this);
         // Say we know here that the user is male and is 35 years old, then we can pass this to AppBrain:
         Calendar calendar = new GregorianCalendar();
-        calendar.add(-35, Calendar.YEAR);
+        calendar.add(Calendar.YEAR, -35);
 
         AppBrain.getAds().setUserData(
             AppBrainUserData.create().setGender(Gender.MALE).setBirthDate(calendar.getTime()));
@@ -50,7 +50,7 @@ public class ExampleActivity extends Activity {
             }
         }, 2500);
 
-        
+
         final AdService ads = AppBrain.getAds();
         findViewById(R.id.maybe_show_interstitial).setOnClickListener(new OnClickListener() {
 
@@ -62,28 +62,28 @@ public class ExampleActivity extends Activity {
                 }
             }
         });
-        
+
         final AdOptions options = new AdOptions();
         options.setListener(new InterstitialListener() {
             @Override
             public void onPresented() {
                 Toast.makeText(ExampleActivity.this,
-                    "Interstitial presented", Toast.LENGTH_SHORT).show();   
+                    "Interstitial presented", Toast.LENGTH_SHORT).show();
             }
-            
+
             @Override
             public void onDismissed(boolean arg0) {
                 Toast.makeText(ExampleActivity.this,
                     "Interstitial dismissed " + arg0, Toast.LENGTH_SHORT).show();
             }
-            
+
             @Override
             public void onClick() {
                 Toast.makeText(ExampleActivity.this,
                     "Interstitial clicked", Toast.LENGTH_SHORT).show();
             }
         });
-        
+
         findViewById(R.id.show_interstitial).setOnClickListener(new OnClickListener() {
 
             @Override
@@ -93,12 +93,12 @@ public class ExampleActivity extends Activity {
                         "Not showing, no internet connection?", Toast.LENGTH_LONG).show();
                 }
             }
-        });        
+        });
 
         ads.setOfferWallClickListener(this, findViewById(R.id.show_offerwall));
-        
+
         findViewById(R.id.show_banners).setOnClickListener(new OnClickListener() {
-            
+
             @Override
             public void onClick(View arg0) {
                 Intent intent = new Intent(ExampleActivity.this, BannerActivity.class);
