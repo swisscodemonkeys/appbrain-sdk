@@ -21,6 +21,13 @@ Recent changes
 
 Every release contains bugfixes and monetizations improvements.
 
+V10.5 (March 11th, 2015):
+
+  * COPPA compliance mode. [Documentation](http://www.appbrain.com/info/sdk-docs/gettingstarted.html#coppa-compliance)
+  * New WebView based in-app alert type.
+  * Fixed proguarded AppBrainBanner.setSize()
+  * Better support for interstitial on tablets.
+
 V10.41 (December 23rd, 2014):
 
   * Easy Gradle/Android studio integration with maven repository. [Documentation](http://www.appbrain.com/info/sdk-docs/gettingstarted.html)
@@ -51,9 +58,4 @@ V10.1 (June 6th, 2014):
   * Added [AppBrain Cloud Alerts](http://blog.appbrain.com/2014/07/keep-in-touch-with-your-users-through.html)
   * Added setOfferWallClickListener function for custom "more apps" buttons
   * Only use Advertising ID for Google Play compliance
-
-V10.0 (March 12th, 2014):
-
-  * Added conversion event tracking
-  * Added stand-alone advertiser SDK
 

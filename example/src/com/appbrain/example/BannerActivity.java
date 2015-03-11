@@ -8,11 +8,12 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.appbrain.AppBrainBanner;
+import com.appbrain.AppBrainBanner.BannerSize;
 import com.appbrain.BannerListener;
 
 public class BannerActivity extends Activity {
@@ -38,9 +39,9 @@ public class BannerActivity extends Activity {
         "Arrows",
         "Ellipse"
     };
-    
+
     private static final int TITLE_COUNT = 4, BUTTON_TEXT_COUNT = 3;
-    
+
     private Spinner title, button, design, color;
     private FrameLayout container;
 
@@ -50,28 +51,28 @@ public class BannerActivity extends Activity {
         setTitle("AppLift banner playground");
         LinearLayout mainLayout = new LinearLayout(this);
         mainLayout.setOrientation(LinearLayout.VERTICAL);
-        
+
         title = new Spinner(this);
         String[] titles = new String[TITLE_COUNT];
         for (int i = 0; i < titles.length; i++) {
             titles[i] = "Title " + i;
         }
         title.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, titles));
-        
+
         button = new Spinner(this);
         String[] buttons = new String[BUTTON_TEXT_COUNT];
         for (int i = 0; i < buttons.length; i++) {
             buttons[i] = "Button " + i;
-        }        
+        }
         button.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, buttons));
-        
+
         design = new Spinner(this);
         design.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, DESIGN_NAMES));
         color = new Spinner(this);
         color.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, COLOR_NAMES));
-        
+
         container = new FrameLayout(this);
-        
+
         OnItemSelectedListener listener = new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
@@ -82,33 +83,33 @@ public class BannerActivity extends Activity {
             public void onNothingSelected(AdapterView<?> arg0) {
             }
         };
-        
+
         title.setSelection(0);
         button.setSelection(0);
         design.setSelection(0);
         color.setSelection(0);
-        
+
         mainLayout.addView(title);
         mainLayout.addView(button);
         mainLayout.addView(design);
         mainLayout.addView(color);
-        
+
         View filler = new View(this);
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, 0);
         params.weight = 1.0f;
         mainLayout.addView(filler, params);
-        
+
         mainLayout.addView(container);
-        
+
         loadAd();
-        
+
         setContentView(mainLayout);
-        
+
         title.setOnItemSelectedListener(listener);
         button.setOnItemSelectedListener(listener);
         design.setOnItemSelectedListener(listener);
         color.setOnItemSelectedListener(listener);
-        
+
     }
 
     private void loadAd() {
@@ -125,7 +126,8 @@ public class BannerActivity extends Activity {
             public void onClick() {
                 Toast.makeText(BannerActivity.this, "Banner clicked!", Toast.LENGTH_SHORT).show();
             } });
-        
+
+        banner.setSize(BannerSize.RESPONSIVE);
         banner.setTitleIndex(title.getSelectedItemPosition());
         banner.setButtonTextIndex(button.getSelectedItemPosition());
         banner.setDesign(design.getSelectedItemPosition());
