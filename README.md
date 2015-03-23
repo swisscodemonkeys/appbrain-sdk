@@ -21,6 +21,10 @@ Recent changes
 
 Every release contains bugfixes and monetizations improvements.
 
+V10.51 (March 23th, 2015):
+
+  * Fixed measuring bug when AppBrainBanner is a child of a RelativeLayout
+
 V10.5 (March 11th, 2015):
 
   * COPPA compliance mode. [Documentation](http://www.appbrain.com/info/sdk-docs/gettingstarted.html#coppa-compliance)
