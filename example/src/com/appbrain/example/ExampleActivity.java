@@ -6,6 +6,7 @@ import java.util.GregorianCalendar;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.KeyEvent;
@@ -15,6 +16,7 @@ import android.widget.Toast;
 
 import com.appbrain.AdOptions;
 import com.appbrain.AdService;
+import com.appbrain.AdService.BorderSize;
 import com.appbrain.AppBrain;
 import com.appbrain.AppBrainUserData;
 import com.appbrain.AppBrainUserData.Gender;
@@ -28,6 +30,7 @@ public class ExampleActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         AppBrain.init(this);
+        AppBrain.getAds().setPopupBorder(Color.parseColor("#145214"), BorderSize.MEDIUM);
         // Say we know here that the user is male and is 35 years old, then we can pass this to AppBrain:
         Calendar calendar = new GregorianCalendar();
         calendar.add(Calendar.YEAR, -35);
