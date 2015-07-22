@@ -21,12 +21,13 @@ Recent changes
 
 Every release contains bugfixes and monetizations improvements.
 
-V11.01 (July 21st, 2015):
+V11.02 (July 21st, 2015):
 
   * Pop-over interstitials that keep the user engaged with your app. You can set your own border color. [Documentation](http://www.appbrain.com/info/sdk-docs/interstitial.html#custom-interstitial-border)
   * Add native ads in Recycler Views. [Documentation](http://www.appbrain.com/info/sdk-docs/listviews.html)
   * Fixed a potential issue with Unity integration.
   * Fix an issue with the webview in-app alert.
+  * V11.02 fixes a proguard issue regarding the RecyclerView ads.
 
 V10.51 (March 23th, 2015):
 
