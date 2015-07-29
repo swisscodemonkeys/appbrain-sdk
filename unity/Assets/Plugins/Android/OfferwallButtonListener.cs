@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2012-2014 AppBrain
+ * Copyright (C) 2012-2015 AppBrain
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,9 +16,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-using AppLift;
+using AppBrainSdk;
 
-namespace AppLift {
+namespace AppBrainSdk {
 	  public class OfferwallButtonListener : MonoBehaviour {
 
 	  	 [SerializeField]

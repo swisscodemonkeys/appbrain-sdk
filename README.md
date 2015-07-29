@@ -1,14 +1,14 @@
-AppBrain AppLift SDK
-===========
+AppBrain SDK
+=============
 
-This repository contains the AppBrain AppLift SDK files and an example project how to use it.
+This repository contains the AppBrain SDK and an example project how to use it. (The AppBrain SDK formerly was called "AppLift").
 
-Click here to [download all files of the AppBrain AppLift SDK](https://github.com/swisscodemonkeys/appbrain-sdk/zipball/master)
+Click here to [download all files of the AppBrain SDK](https://github.com/swisscodemonkeys/appbrain-sdk/zipball/master)
 
 Please make sure you read and understood these documents before  using the SDK:
   
-  * [AppBrain AppLift SDK](http://www.appbrain.com/info/sdk)
-  * [SDK Policy](http://www.appbrain.com/info/sdk-policy)
+  * [AppBrain SDK documentation](http://www.appbrain.com/info/sdk)
+  * [SDK integration policy](http://www.appbrain.com/info/sdk-policy)
   * [SDK Terms Of Service](http://www.appbrain.com/info/sdk-tos)
 
 Please contact us directly at contact@appbrain.com if you need any assistence, and we will be happy to help you.

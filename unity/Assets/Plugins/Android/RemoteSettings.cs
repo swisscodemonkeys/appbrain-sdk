@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 AppBrain
+ * Copyright (C) 2012-2015 AppBrain
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@ using System;
 using System.Collections;
 using System.Runtime.InteropServices;
 
-namespace AppLift {
+namespace AppBrainSdk {
 #if UNITY_ANDROID
 	public class RemoteSettings
 	{
