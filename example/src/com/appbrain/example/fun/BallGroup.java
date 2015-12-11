@@ -22,8 +22,7 @@ public class BallGroup {
         this.height = height;
         balls = new ArrayList<Ball>(0);
 
-        createText(balls, "AppLift");
-
+        createText(balls, "AppBrain");
     }
 
     private void createText(List<Ball> ballsArrayList, String text) {
@@ -46,7 +45,7 @@ public class BallGroup {
 
         float s = 1.2f;
         float[] hsv = new float[3];
-        
+
         int midx = w / 2, midy = h / 2;
 
         for (int y = 0; y < h; y += step) {

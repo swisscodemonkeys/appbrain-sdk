@@ -21,6 +21,12 @@ Recent changes
 
 Every release contains bugfixes and monetizations improvements.
 
+V11.20 (December 11th, 2015):
+
+  * Better performing interstitials
+  * More accurate identification of users who are likely to install promoted apps
+  * Better handling of problems caused by devices with buggy Android OS versions
+
 V11.10 (October 1st, 2015):
 
   * Reduction of promotions for apps that are not available to the current user
@@ -55,20 +61,4 @@ V10.4 (December 17th, 2014):
 
   * Added AppBrain.getAds().setUserData(AppBrainUserData) to communicate demographic information and location for increased monetization. [Documentation](http://www.appbrain.com/info/help/sdk/javadoc/AppBrainUserData.html)
   * Fixes for Unity, and "More Apps" button click listener. [Unity documentation](http://www.appbrain.com/info/help/sdk/unity.html)
-
-V10.31 & V10.32 (October 14th & 20th, 2014):
-
-  * Small fixes for Admob mediation
-
-V10.3 (October 14th, 2014):
-
-  * Improvements to banner monetization
-  * Automatically scale up banner size on tablets ("SMART / RESPONSIVE" banner size).
-  * Give more control over banner size using AppBrainBanner.setSize(DEFAULT | LARGE | RESPONSIVE).
-
-V10.2 (July 29th, 2014):
-
-  * Added instream ads
-  * Better reporting of events to mediation adapters
-
 
