@@ -1,7 +1,5 @@
 package com.appbrain.example.fun;
 
-import android.util.FloatMath;
-
 public class Vector {
     public float x, y;
 
@@ -53,7 +51,7 @@ public class Vector {
         if (x == 0 && y == 0) {
             return 0;
         } else {
-            return FloatMath.sqrt(x * x + y * y);
+            return (float)Math.sqrt(x * x + y * y);
         }
     }
 
@@ -82,7 +80,7 @@ public class Vector {
         if (x == 0 && y == 0) {
             return 0;
         } else {
-            return FloatMath.sqrt(x * x + y * y);
+            return (float)Math.sqrt(x * x + y * y);
         }
     }
 }
