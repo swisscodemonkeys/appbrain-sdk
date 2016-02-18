@@ -7,7 +7,7 @@ Click here to [download all files of the AppBrain SDK](https://github.com/swissc
 
 Please make sure you read and understood these documents before  using the SDK:
   
-  * [AppBrain SDK documentation](www.appbrain.com/info/help/sdk/index.html)
+  * [AppBrain SDK documentation](http://www.appbrain.com/info/help/sdk/index.html)
   * [SDK integration policy](http://www.appbrain.com/info/help/sdk/policy.html)
   * [SDK Terms Of Service](http://www.appbrain.com/info/help/publisher-tos.html)
 
