@@ -21,6 +21,13 @@ Recent changes
 
 Every release contains bugfixes and monetizations improvements.
 
+V12.00 (March 24th, 2016):
+
+  * Tag ad units with Ad IDs. [Documentation](http://www.appbrain.com/info/help/sdk/javadoc/AdId.html)
+  * Made interstitial better to show in other place than at app exit.
+  * Easier API to show interstitials: InterstitialBuilder. [Documentation](http://www.appbrain.com/info/help/sdk/javadoc/InterstitialBuilder.html)
+  * Startup performance optimizations.
+
 V11.20 (December 11th, 2015):
 
   * Better performing interstitials
