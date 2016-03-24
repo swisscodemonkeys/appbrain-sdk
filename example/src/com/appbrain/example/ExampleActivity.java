@@ -3,40 +3,34 @@ package com.appbrain.example;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
-import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
-
-import com.appbrain.AdOptions;
+import com.appbrain.AdId;
 import com.appbrain.AdService;
-import com.appbrain.AdService.BorderSize;
 import com.appbrain.AppBrain;
 import com.appbrain.AppBrainUserData;
 import com.appbrain.AppBrainUserData.Gender;
+import com.appbrain.InterstitialBuilder;
 import com.appbrain.InterstitialListener;
 import com.appbrain.RemoteSettings;
 
 public class ExampleActivity extends Activity {
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         AppBrain.init(this);
-        AppBrain.getAds().setPopupBorder(Color.parseColor("#145214"), BorderSize.MEDIUM);
         // Say we know here that the user is male and is 35 years old, then we can pass this to AppBrain:
         Calendar calendar = new GregorianCalendar();
         calendar.add(Calendar.YEAR, -35);
 
-        AppBrain.getAds().setUserData(
-            AppBrainUserData.create().setGender(Gender.MALE).setBirthDate(calendar.getTime()));
+        AppBrain.getAds().setUserData(AppBrainUserData.create().setGender(Gender.MALE).setBirthDate(
+            calendar.getTime()));
 
         setContentView(R.layout.main);
 
@@ -59,15 +53,15 @@ public class ExampleActivity extends Activity {
 
             @Override
             public void onClick(View v) {
-                if (!ads.maybeShowInterstitial(ExampleActivity.this)) {
+                InterstitialBuilder builder = InterstitialBuilder.create();
+                if (!builder.maybeShow(ExampleActivity.this)) {
                     Toast.makeText(ExampleActivity.this,
                         "not showing, since it was shown already recently", Toast.LENGTH_LONG).show();
                 }
             }
         });
 
-        final AdOptions options = new AdOptions();
-        options.setListener(new InterstitialListener() {
+        final InterstitialListener listener = new InterstitialListener() {
             @Override
             public void onPresented() {
                 Toast.makeText(ExampleActivity.this,
@@ -85,13 +79,15 @@ public class ExampleActivity extends Activity {
                 Toast.makeText(ExampleActivity.this,
                     "Interstitial clicked", Toast.LENGTH_SHORT).show();
             }
-        });
+        };
 
         findViewById(R.id.show_interstitial).setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                if (!ads.showInterstitial(ExampleActivity.this, options)) {
+                InterstitialBuilder builder = InterstitialBuilder.create().setListener(listener);
+                builder.setAdId(AdId.HOME_SCREEN);
+                if (!builder.show(ExampleActivity.this)) {
                     Toast.makeText(ExampleActivity.this,
                         "Not showing, no internet connection?", Toast.LENGTH_LONG).show();
                 }
@@ -101,7 +97,6 @@ public class ExampleActivity extends Activity {
         ads.setOfferWallClickListener(this, findViewById(R.id.show_offerwall));
 
         findViewById(R.id.show_banners).setOnClickListener(new OnClickListener() {
-
             @Override
             public void onClick(View arg0) {
                 Intent intent = new Intent(ExampleActivity.this, BannerActivity.class);
@@ -117,22 +112,11 @@ public class ExampleActivity extends Activity {
         });
     }
 
-    // @Override
     @Override
     public void onBackPressed() {
-        AppBrain.getAds().maybeShowInterstitial(this);
-        finish();
-    }
-
-    @Override
-    @TargetApi(value=5)
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (android.os.Build.VERSION.SDK_INT < 5 && keyCode == KeyEvent.KEYCODE_BACK
-            && event.getRepeatCount() == 0) {
-            // Take care of calling this method on earlier versions of
-            // the platform where it doesn't exist.
-            onBackPressed();
+        if (!InterstitialBuilder.create().setAdId(AdId.EXIT).setFinishOnExit(ExampleActivity.this)
+            .show(ExampleActivity.this)) {
+            super.onBackPressed();
         }
-        return super.onKeyDown(keyCode, event);
     }
 }

@@ -12,6 +12,7 @@ import android.widget.LinearLayout.LayoutParams;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.appbrain.AdId;
 import com.appbrain.AppBrainBanner;
 import com.appbrain.AppBrainBanner.BannerSize;
 import com.appbrain.BannerListener;
@@ -126,7 +127,7 @@ public class BannerActivity extends Activity {
             public void onClick() {
                 Toast.makeText(BannerActivity.this, "Banner clicked!", Toast.LENGTH_SHORT).show();
             } });
-
+        banner.setAdId(AdId.DEFAULT);
         banner.setSize(BannerSize.RESPONSIVE);
         banner.setTitleIndex(title.getSelectedItemPosition());
         banner.setButtonTextIndex(button.getSelectedItemPosition());
