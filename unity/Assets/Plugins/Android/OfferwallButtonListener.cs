@@ -26,7 +26,7 @@ namespace AppBrainSdk {
 		 
 		 void Start() {
 		      AppBrain.Init();
-		      myButton.onClick.AddListener(() => AppBrain.GetAds().ShowOfferWall());
+		      myButton.onClick.AddListener(() => AppBrain.GetAds().OfferwallButtonClick());
 		 }
 	  }
 }
