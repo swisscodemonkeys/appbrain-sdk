@@ -14,17 +14,17 @@ The following example file calls the AppLift functions.
 
 	using UnityEngine;
 	using System.Collections;
-	using AppLift;
+	using AppBrainSdk;
 
 	public class main : MonoBehaviour {
 		void Start () {
-	    		AppBrain.Init();
+		AppBrain.Init();
 		}
 
 		void Update () {
-		    if (Input.GetKeyUp(KeyCode.Escape)) {
-			AppBrain.GetAds().ShowInterstitial(true);
-		    }
+			if (Input.GetKeyUp(KeyCode.Escape)) {
+				AppBrain.GetAds().ShowInterstitial(true);
+			}
 		}
 	}
 
