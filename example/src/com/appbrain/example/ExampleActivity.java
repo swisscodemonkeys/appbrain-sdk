@@ -20,6 +20,9 @@ import com.appbrain.InterstitialListener;
 import com.appbrain.RemoteSettings;
 
 public class ExampleActivity extends Activity {
+    private InterstitialBuilder builder;
+    private InterstitialBuilder exitInterstitialBuilder;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,20 +50,6 @@ public class ExampleActivity extends Activity {
             }
         }, 2500);
 
-
-        final AdService ads = AppBrain.getAds();
-        findViewById(R.id.maybe_show_interstitial).setOnClickListener(new OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                InterstitialBuilder builder = InterstitialBuilder.create();
-                if (!builder.maybeShow(ExampleActivity.this)) {
-                    Toast.makeText(ExampleActivity.this,
-                        "not showing, since it was shown already recently", Toast.LENGTH_LONG).show();
-                }
-            }
-        });
-
         final InterstitialListener listener = new InterstitialListener() {
             @Override
             public void onPresented() {
@@ -69,9 +58,24 @@ public class ExampleActivity extends Activity {
             }
 
             @Override
-            public void onDismissed(boolean arg0) {
+            public void onDismissed(boolean wasClicked) {
                 Toast.makeText(ExampleActivity.this,
-                    "Interstitial dismissed " + arg0, Toast.LENGTH_SHORT).show();
+                    "Interstitial dismissed, clicked: " + wasClicked, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onAdLoaded() {
+                Toast.makeText(ExampleActivity.this,
+                    "Ad successfully loaded!", Toast.LENGTH_SHORT).show();
+                // If we want to show as soon as possible we would call
+                // builder.show(ExampleActivity.this);
+                // here.
+            }
+
+            @Override
+            public void onAdFailedToLoad(InterstitialError interstitialError) {
+                Toast.makeText(ExampleActivity.this,
+                    "Ad failed to load: " + interstitialError, Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -81,15 +85,34 @@ public class ExampleActivity extends Activity {
             }
         };
 
-        findViewById(R.id.show_interstitial).setOnClickListener(new OnClickListener() {
+        builder = InterstitialBuilder.create().setListener(listener).
+            setAdId(AdId.HOME_SCREEN).preload(this);
 
+        exitInterstitialBuilder = InterstitialBuilder.create().setAdId(AdId.EXIT).preload(this);
+
+        final AdService ads = AppBrain.getAds();
+        findViewById(R.id.maybe_show_interstitial).setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                InterstitialBuilder builder = InterstitialBuilder.create().setListener(listener);
-                builder.setAdId(AdId.HOME_SCREEN);
+                InterstitialBuilder builder = InterstitialBuilder.create();
+                if (!builder.maybeShow(ExampleActivity.this)) {
+                    Toast.makeText(ExampleActivity.this,
+                        "not showing, since it was shown already recently", Toast.LENGTH_LONG).show();
+                } else {
+                    // Preload the builder again
+                    builder.preload(ExampleActivity.this);
+                }
+            }
+        });
+        findViewById(R.id.show_interstitial).setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 if (!builder.show(ExampleActivity.this)) {
                     Toast.makeText(ExampleActivity.this,
                         "Not showing, no internet connection?", Toast.LENGTH_LONG).show();
+                } else {
+                    // Preload the builder again
+                    builder.preload(ExampleActivity.this);
                 }
             }
         });
@@ -114,7 +137,7 @@ public class ExampleActivity extends Activity {
 
     @Override
     public void onBackPressed() {
-        if (!InterstitialBuilder.create().setAdId(AdId.EXIT).setFinishOnExit(ExampleActivity.this)
+        if (!exitInterstitialBuilder.setFinishOnExit(ExampleActivity.this)
             .show(ExampleActivity.this)) {
             super.onBackPressed();
         }

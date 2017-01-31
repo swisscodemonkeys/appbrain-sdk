@@ -21,6 +21,12 @@ Recent changes
 
 Every release contains bugfixes and monetizations improvements.
 
+V13.00 (January 31st, 2017):
+  * Added preload() function to InterstitialBuilder. [Documentation](https://www.appbrain.com/info/help/sdk/javadoc/InterstitialBuilder.html)
+  * InterstitialLoader now has onAdLoaded and onAdFailedToLoad callbacks. [Documentation](https://www.appbrain.com/info/help/sdk/javadoc/InterstitialListener.html#com.appbrain.InterstitialListener)
+  * Supports mediation (contact us for details).
+  * Better timeouts for ad conversion rates.
+
 V12.00 (March 24th, 2016):
 
   * Tag ad units with Ad IDs. [Documentation](http://www.appbrain.com/info/help/sdk/javadoc/AdId.html)
@@ -63,9 +69,4 @@ V10.41 (December 23rd, 2014):
 
   * Easy Gradle/Android studio integration with maven repository. [Documentation](http://www.appbrain.com/info/help/sdk/gettingstarted.html)
   * Admob mediation adapter is now integrated in the main SDK jar. [AdMob medation documentation](http://www.appbrain.com/info/help/sdk/admob.html)
-
-V10.4 (December 17th, 2014):
-
-  * Added AppBrain.getAds().setUserData(AppBrainUserData) to communicate demographic information and location for increased monetization. [Documentation](http://www.appbrain.com/info/help/sdk/javadoc/AppBrainUserData.html)
-  * Fixes for Unity, and "More Apps" button click listener. [Unity documentation](http://www.appbrain.com/info/help/sdk/unity.html)
 
