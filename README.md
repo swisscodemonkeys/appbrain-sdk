@@ -7,9 +7,9 @@ Click here to [download all files of the AppBrain SDK](https://github.com/swissc
 
 Please make sure you read and understood these documents before  using the SDK:
   
-  * [AppBrain SDK documentation](http://www.appbrain.com/info/help/sdk/index.html)
-  * [SDK integration policy](http://www.appbrain.com/info/help/sdk/policy.html)
-  * [SDK Terms Of Service](http://www.appbrain.com/info/help/publisher-tos.html)
+  * [AppBrain SDK documentation](https://www.appbrain.com/info/help/sdk/index.html)
+  * [SDK integration policy](https://www.appbrain.com/info/help/sdk/policy.html)
+  * [SDK Terms Of Service](https://www.appbrain.com/info/help/publisher-tos.html)
 
 Please contact us directly at contact@appbrain.com if you need any assistence, and we will be happy to help you.
 
@@ -20,6 +20,9 @@ Recent changes
 ============
 
 Every release contains bugfixes and monetizations improvements.
+
+V13.10 (April 5th, 2017):
+  * Added support for 11 more languages, bringing the total to 34.
 
 V13.00 (January 31st, 2017):
   * Added preload() function to InterstitialBuilder. [Documentation](https://www.appbrain.com/info/help/sdk/javadoc/InterstitialBuilder.html)
