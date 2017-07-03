@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2012-2015 AppBrain
+ * Copyright (C) 2012-2017 AppBrain
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -12,22 +12,28 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ *
+ *
+ * This file is part of the AppBrain SDK for Unity:
+ * https://www.appbrain.com/info/help/sdk/unity.html
  */
 using UnityEngine;
-using UnityEngine.UI;
-using System.Collections;
 using AppBrainSdk;
 
-namespace AppBrainSdk {
-	  public class OfferwallButtonListener : MonoBehaviour {
+public class ExitInterstitial : MonoBehaviour
+{
+	private InterstitialBuilder interstitialBuilder;
 
-	  	 [SerializeField]
-		 private Button myButton;
-		 
-		 void Start() {
-		      AppBrain.Init();
-		      myButton.onClick.AddListener(() => AppBrain.GetAds().OfferwallButtonClick());
-		 }
-	  }
+	void Start()
+	{
+		interstitialBuilder = InterstitialBuilder.Create().SetAdId(AdId.Exit).SetFinishOnExit(true).Preload();
+	}
+
+	void Update()
+	{
+		if (Input.GetKeyUp(KeyCode.Escape) && !interstitialBuilder.Show())
+		{
+			Application.Quit();
+		}
+	}
 }
-
