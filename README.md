@@ -21,6 +21,12 @@ Recent changes
 
 Every release contains bugfixes and monetizations improvements.
 
+V13.20 (July 3rd, 2017):
+  * Improved support for Unity. [Documentation](https://www.appbrain.com/info/help/sdk/unity.html)
+  * Automatic SDK initialization. (Calling AppBrain.init() is optional now).
+  * Android O compatibility fixes
+  * Removed RecyclerView-based ads
+
 V13.10 (April 5th, 2017):
   * Added support for 11 more languages, bringing the total to 34.
 
