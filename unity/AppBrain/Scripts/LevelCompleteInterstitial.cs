@@ -18,23 +18,36 @@
  * https://www.appbrain.com/info/help/sdk/unity.html
  */
 using UnityEngine;
+using System;
 
 namespace AppBrainSdk
 {
-	public class ExitInterstitial : MonoBehaviour
+	public abstract class LevelCompleteInterstitial : MonoBehaviour
 	{
 		private InterstitialBuilder interstitialBuilder;
 
+		protected abstract void OnNextLevel();
+
 		void Start()
 		{
-			interstitialBuilder = InterstitialBuilder.Create().SetAdId(AdId.Exit).SetFinishOnExit(true).Preload();
+			interstitialBuilder = InterstitialBuilder.Create()
+				.SetAdId(AdId.LevelComplete)
+				.SetListener(new InterstitialListener()
+					{
+						OnDismissed = (wasClicked) =>
+							{
+								interstitialBuilder.Preload();
+								OnNextLevel();
+							}
+					})
+				.Preload();
 		}
 
-		void Update()
+		public void OnLevelComplete()
 		{
-			if (Input.GetKeyUp(KeyCode.Escape) && !interstitialBuilder.Show())
+			if (!interstitialBuilder.MaybeShow())
 			{
-				Application.Quit();
+				OnNextLevel();
 			}
 		}
 	}
