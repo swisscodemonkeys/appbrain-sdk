@@ -21,9 +21,10 @@ Recent changes
 
 Every release contains bugfixes and monetizations improvements.
 
-V13.21 (July 19th, 2017):
+V13.22 (July 21th, 2017):
   * Fixed proguard issue
   * Fixed rare WebView instantiation issue
+  * Workaround for rare OkHttp IllegalStateException "cache is closed"
 
 V13.20 (July 3rd, 2017):
   * Improved support for Unity. [Documentation](https://www.appbrain.com/info/help/sdk/unity.html)
