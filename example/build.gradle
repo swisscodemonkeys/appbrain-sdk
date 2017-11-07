@@ -8,6 +8,12 @@ buildscript {
     }
 }
 
+repositories {
+    maven {
+        url 'http://swisscodemonkeys.github.io/appbrain-sdk/maven'
+    }
+}
+
 apply plugin: 'com.android.application'
 
 android {
@@ -57,5 +63,5 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.appbrain:appbrain-sdk:+@aar'
 }
