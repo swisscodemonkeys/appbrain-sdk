@@ -21,6 +21,10 @@ Recent changes
 
 Every release contains bugfixes and monetizations improvements.
 
+V13.30 (November 7th, 2017):
+  * Added convenient onDoneCallback for InterstitialBuilder. [Documentation](https://www.appbrain.com/info/help/sdk/javadoc/InterstitialBuilder.html#com.appbrain.InterstitialBuilder.setOnDoneCallback(Runnable))
+  * Speed optimizations, removed potential StrictMode warnings
+
 V13.22 (July 21th, 2017):
   * Fixed proguard issue
   * Fixed rare WebView instantiation issue
