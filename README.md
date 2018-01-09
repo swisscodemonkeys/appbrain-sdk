@@ -21,6 +21,11 @@ Recent changes
 
 Every release contains bugfixes and monetizations improvements.
 
+V14.00 (January 9th, 2018):
+  * Added remotely-controllable interstitials
+  * Better protection against scammy ads
+  * Speed and stability optimizations
+
 V13.30 (November 7th, 2017):
   * Added convenient onDoneCallback for InterstitialBuilder. [Documentation](https://www.appbrain.com/info/help/sdk/javadoc/InterstitialBuilder.html#com.appbrain.InterstitialBuilder.setOnDoneCallback(Runnable))
   * Speed optimizations, removed potential StrictMode warnings
@@ -47,9 +52,9 @@ V13.00 (January 31st, 2017):
 
 V12.00 (March 24th, 2016):
 
-  * Tag ad units with Ad IDs. [Documentation](http://www.appbrain.com/info/help/sdk/javadoc/AdId.html)
+  * Tag ad units with Ad IDs. [Documentation](https://www.appbrain.com/info/help/sdk/javadoc/AdId.html)
   * Made interstitial better to show in other place than at app exit.
-  * Easier API to show interstitials: InterstitialBuilder. [Documentation](http://www.appbrain.com/info/help/sdk/javadoc/InterstitialBuilder.html)
+  * Easier API to show interstitials: InterstitialBuilder. [Documentation](https://www.appbrain.com/info/help/sdk/javadoc/InterstitialBuilder.html)
   * Startup performance optimizations.
 
 V11.20 (December 11th, 2015):
@@ -66,8 +71,8 @@ V11.10 (October 1st, 2015):
 
 V11.02 (July 21st, 2015):
 
-  * Pop-over interstitials that keep the user engaged with your app. You can set your own border color. [Documentation](http://www.appbrain.com/info/help/sdk/interstitial.html#custom-interstitial-border)
-  * Add native ads in Recycler Views. [Documentation](http://www.appbrain.com/info/help/sdk/listviews.html)
+  * Pop-over interstitials that keep the user engaged with your app. You can set your own border color. [Documentation](https://www.appbrain.com/info/help/sdk/interstitial.html#custom-interstitial-border)
+  * Add native ads in Recycler Views. [Documentation](https://www.appbrain.com/info/help/sdk/listviews.html)
   * Fixed a potential issue with Unity integration.
   * Fix an issue with the webview in-app alert.
   * V11.02 fixes a proguard issue regarding the RecyclerView ads.
@@ -78,13 +83,8 @@ V10.51 (March 23th, 2015):
 
 V10.5 (March 11th, 2015):
 
-  * COPPA compliance mode. [Documentation](http://www.appbrain.com/info/help/sdk/gettingstarted.html#coppa-compliance)
+  * COPPA compliance mode. [Documentation](https://www.appbrain.com/info/help/sdk/gettingstarted.html#coppa-compliance)
   * New WebView based in-app alert type.
   * Fixed proguarded AppBrainBanner.setSize()
   * Better support for interstitial on tablets.
-
-V10.41 (December 23rd, 2014):
-
-  * Easy Gradle/Android studio integration with maven repository. [Documentation](http://www.appbrain.com/info/help/sdk/gettingstarted.html)
-  * Admob mediation adapter is now integrated in the main SDK jar. [AdMob medation documentation](http://www.appbrain.com/info/help/sdk/admob.html)
 

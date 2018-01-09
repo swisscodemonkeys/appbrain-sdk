@@ -88,7 +88,14 @@ public class ExampleActivity extends Activity {
         builder = InterstitialBuilder.create().setListener(listener).
             setAdId(AdId.HOME_SCREEN).preload(this);
 
-        exitInterstitialBuilder = InterstitialBuilder.create().setAdId(AdId.EXIT).preload(this);
+        exitInterstitialBuilder = InterstitialBuilder.create().setAdId(AdId.EXIT);
+        exitInterstitialBuilder.setOnDoneCallback(new Runnable(){
+            @Override
+            public void run() {
+                ExampleActivity.this.finish();
+            }
+        });
+        exitInterstitialBuilder.preload(this);
 
         final AdService ads = AppBrain.getAds();
         findViewById(R.id.maybe_show_interstitial).setOnClickListener(new OnClickListener() {
@@ -137,9 +144,6 @@ public class ExampleActivity extends Activity {
 
     @Override
     public void onBackPressed() {
-        if (!exitInterstitialBuilder.setFinishOnExit(ExampleActivity.this)
-            .show(ExampleActivity.this)) {
-            super.onBackPressed();
-        }
+        exitInterstitialBuilder.show(ExampleActivity.this);
     }
 }
