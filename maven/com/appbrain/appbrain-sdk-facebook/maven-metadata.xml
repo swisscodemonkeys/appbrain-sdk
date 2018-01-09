@@ -3,7 +3,7 @@
   <groupId>com.appbrain</groupId>
   <artifactId>appbrain-sdk-facebook</artifactId>
   <versioning>
-    <release>13.30</release>
+    <release>14.00</release>
     <versions>
       <version>13.00</version>
       <version>13.10</version>
@@ -11,7 +11,8 @@
       <version>13.21</version>
       <version>13.22</version>
       <version>13.30</version>
+      <version>14.00</version>
     </versions>
-    <lastUpdated>20171107093759</lastUpdated>
+    <lastUpdated>20180109123718</lastUpdated>
   </versioning>
 </metadata>
