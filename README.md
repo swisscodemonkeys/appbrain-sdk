@@ -21,8 +21,12 @@ Recent changes
 
 Every release contains bugfixes and monetizations improvements.
 
+V14.10 (February 9th, 2018):
+  * Improve loading speeds with DNS prefetching
+  * Various other speed and stability optimizations
+
 V14.00 (January 9th, 2018):
-  * Added remotely-controllable interstitials
+  * Added remotely-controllable interstitials [Blogpost](https://medium.com/appbrain/appbrain-automatic-interstitials-easily-control-ad-placement-in-your-android-app-f6717dd08183)
   * Better protection against scammy ads
   * Speed and stability optimizations
 
