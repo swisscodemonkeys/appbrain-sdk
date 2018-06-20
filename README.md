@@ -21,6 +21,11 @@ Recent changes
 
 Every release contains bugfixes and monetizations improvements.
 
+V14.20 (June 20th, 2018):
+  * Detect better which devices can advertise demanding advertiser apps
+  * Fixed issue around proguard setup
+  * Speed and stability optimizations
+
 V14.10 (February 9th, 2018):
   * Improve loading speeds with DNS prefetching
   * Various other speed and stability optimizations
