@@ -3,7 +3,7 @@
   <groupId>com.appbrain</groupId>
   <artifactId>appbrain-sdk-inmobi</artifactId>
   <versioning>
-    <release>14.10</release>
+    <release>14.20</release>
     <versions>
       <version>13.00</version>
       <version>13.10</version>
@@ -13,7 +13,8 @@
       <version>13.30</version>
       <version>14.00</version>
       <version>14.10</version>
+      <version>14.20</version>
     </versions>
-    <lastUpdated>20180209135002</lastUpdated>
+    <lastUpdated>20180620085154</lastUpdated>
   </versioning>
 </metadata>
