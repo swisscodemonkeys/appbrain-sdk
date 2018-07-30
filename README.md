@@ -21,6 +21,10 @@ Recent changes
 
 Every release contains bugfixes and monetizations improvements.
 
+V14.30 (July 30th, 2018):
+  * Allow programmatic setting of user-returns-to-app interstitial. [Documentation](https://www.appbrain.com/info/help/sdk/javadoc/AdService.html#com.appbrain.AdService.setReturnToAppInterstitial%28ReturnToAppConfig%29)
+  * Set adids in Admob and Mopub mediation through extra data. [Admob documentation](https://www.appbrain.com/info/help/sdk/admob.html#mediating-the-appbrain-interstitial) [Mopub documentation](https://www.appbrain.com/info/help/sdk/mopub.html#mediating-the-appbrain-banners)
+
 V14.20 (June 20th, 2018):
   * Detect better which devices can advertise demanding advertiser apps
   * Fixed issue around proguard setup
@@ -89,11 +93,4 @@ V11.02 (July 21st, 2015):
 V10.51 (March 23th, 2015):
 
   * Fixed measuring bug when AppBrainBanner is a child of a RelativeLayout
-
-V10.5 (March 11th, 2015):
-
-  * COPPA compliance mode. [Documentation](https://www.appbrain.com/info/help/sdk/gettingstarted.html#coppa-compliance)
-  * New WebView based in-app alert type.
-  * Fixed proguarded AppBrainBanner.setSize()
-  * Better support for interstitial on tablets.
 
