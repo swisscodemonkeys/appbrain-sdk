@@ -21,6 +21,10 @@ Recent changes
 
 Every release contains bugfixes and monetizations improvements.
 
+V14.40 (October 17th, 2018):
+  * Android O and P compatibility fixes
+  * Large performance update, significant reduction in appwall loading time on some devices
+
 V14.30 (July 30th, 2018):
   * Allow programmatic setting of user-returns-to-app interstitial. [Documentation](https://www.appbrain.com/info/help/sdk/javadoc/AdService.html#com.appbrain.AdService.setReturnToAppInterstitial%28ReturnToAppConfig%29)
   * Set adids in Admob and Mopub mediation through extra data. [Admob documentation](https://www.appbrain.com/info/help/sdk/admob.html#mediating-the-appbrain-interstitial) [Mopub documentation](https://www.appbrain.com/info/help/sdk/mopub.html#mediating-the-appbrain-banners)
