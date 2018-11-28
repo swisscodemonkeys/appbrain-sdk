@@ -3,23 +3,25 @@ AppBrain SDK
 
 This repository contains the AppBrain SDK and an example project how to use it. (The AppBrain SDK formerly was called "AppLift").
 
-Click here to [download all files of the AppBrain SDK](https://github.com/swisscodemonkeys/appbrain-sdk/zipball/master)
+To learn more about our SDK, [visit our Android monetization SDK information page](https://www.appbrain.com/info/monetize). 
 
-Please make sure you read and understood these documents before  using the SDK:
+Other documentation for the SDK is available here:
   
-  * [AppBrain SDK documentation](https://www.appbrain.com/info/help/sdk/index.html)
+  * [Getting started guide](https://www.appbrain.com/info/help/sdk/gettingstarted.html)
   * [SDK integration policy](https://www.appbrain.com/info/help/sdk/policy.html)
   * [SDK Terms Of Service](https://www.appbrain.com/info/help/publisher-tos.html)
 
 Please contact us directly at contact@appbrain.com if you need any assistence, and we will be happy to help you.
 
-AppBrain Team
-
 
 Recent changes
-============
+==============
 
 Every release contains bugfixes and monetizations improvements.
+
+V14.50 (November 28th, 2018):
+  * Detect non-working clickthroughs better
+  * Fix for Unity
 
 V14.40 (October 17th, 2018):
   * Android O and P compatibility fixes
@@ -79,22 +81,4 @@ V11.20 (December 11th, 2015):
   * Better performing interstitials
   * More accurate identification of users who are likely to install promoted apps
   * Better handling of problems caused by devices with buggy Android OS versions
-
-V11.10 (October 1st, 2015):
-
-  * Reduction of promotions for apps that are not available to the current user
-  * Fixes to be able to compile with targetSdkVersion=23
-  * Transparent offerwall for better integration within the publisher app
-
-V11.02 (July 21st, 2015):
-
-  * Pop-over interstitials that keep the user engaged with your app. You can set your own border color. [Documentation](https://www.appbrain.com/info/help/sdk/interstitial.html#custom-interstitial-border)
-  * Add native ads in Recycler Views. [Documentation](https://www.appbrain.com/info/help/sdk/listviews.html)
-  * Fixed a potential issue with Unity integration.
-  * Fix an issue with the webview in-app alert.
-  * V11.02 fixes a proguard issue regarding the RecyclerView ads.
-
-V10.51 (March 23th, 2015):
-
-  * Fixed measuring bug when AppBrainBanner is a child of a RelativeLayout
 
