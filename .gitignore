@@ -1,7 +1,12 @@
 */bin/*
 */gen/*
+*/build/*
 R.java
 *.pyc
 *.class
 *~
 *.swp
+*.iml
+.gradle
+.idea
+local.properties
