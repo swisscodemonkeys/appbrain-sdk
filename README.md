@@ -19,6 +19,9 @@ Recent changes
 
 Every release contains bugfixes and monetizations improvements.
 
+V14.60 (January 29th, 2019):
+  * Reduce ANRs caused by SharedPreferences
+
 V14.50 (November 28th, 2018):
   * Detect non-working clickthroughs better
   * Fix for Unity
@@ -75,10 +78,4 @@ V12.00 (March 24th, 2016):
   * Made interstitial better to show in other place than at app exit.
   * Easier API to show interstitials: InterstitialBuilder. [Documentation](https://www.appbrain.com/info/help/sdk/javadoc/InterstitialBuilder.html)
   * Startup performance optimizations.
-
-V11.20 (December 11th, 2015):
-
-  * Better performing interstitials
-  * More accurate identification of users who are likely to install promoted apps
-  * Better handling of problems caused by devices with buggy Android OS versions
 
