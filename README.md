@@ -21,6 +21,11 @@ Recent changes
 
 Every release contains bugfixes and monetizations improvements.
 
+V15.00 (July 1st, 2019):
+  * Startup optimizations
+  * Improved Google Play referrer reporting
+  * Default ListView ads show "Ad" in corner in accordance with Google Play policy guidelines
+
 V14.60 (January 29th, 2019):
   * Reduce ANRs caused by SharedPreferences
 
@@ -73,11 +78,4 @@ V13.00 (January 31st, 2017):
   * InterstitialLoader now has onAdLoaded and onAdFailedToLoad callbacks. [Documentation](https://www.appbrain.com/info/help/sdk/javadoc/InterstitialListener.html#com.appbrain.InterstitialListener)
   * Supports mediation (contact us for details).
   * Better timeouts for ad conversion rates.
-
-V12.00 (March 24th, 2016):
-
-  * Tag ad units with Ad IDs. [Documentation](https://www.appbrain.com/info/help/sdk/javadoc/AdId.html)
-  * Made interstitial better to show in other place than at app exit.
-  * Easier API to show interstitials: InterstitialBuilder. [Documentation](https://www.appbrain.com/info/help/sdk/javadoc/InterstitialBuilder.html)
-  * Startup performance optimizations.
 

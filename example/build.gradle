@@ -67,5 +67,5 @@ android {
 }
 
 dependencies {
-    implementation 'com.appbrain:appbrain-sdk:+@aar'
+    implementation 'com.appbrain:appbrain-sdk:+'
 }
