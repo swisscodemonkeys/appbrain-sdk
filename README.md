@@ -21,6 +21,9 @@ Recent changes
 
 Every release contains bugfixes and monetizations improvements.
 
+V15.10 (December 10th, 2019):
+  * Stability improvements
+
 V15.00 (July 1st, 2019):
   * Startup optimizations
   * Improved Google Play referrer reporting
