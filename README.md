@@ -21,12 +21,13 @@ Recent changes
 
 Every release contains bugfixes and monetizations improvements.
 
-V15.10 (December 10th, 2019):
+V15.11 (December 12th, 2019):
+  * Remove ReferrerReceiver from the manifest as Google will stop broadcasting install referrers soon. [See our blogpost for more information](https://medium.com/appbrain/the-google-play-referrer-api-and-the-appbrain-sdk-38cfbaa350dc)
   * Stability improvements
 
 V15.00 (July 1st, 2019):
   * Startup optimizations
-  * Improved Google Play referrer reporting
+  * Improved Google Play referrer reporting (using Referrer API)
   * Default ListView ads show "Ad" in corner in accordance with Google Play policy guidelines
 
 V14.60 (January 29th, 2019):
