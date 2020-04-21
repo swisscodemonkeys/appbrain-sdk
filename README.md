@@ -21,6 +21,10 @@ Recent changes
 
 Every release contains bugfixes and monetizations improvements.
 
+V16.00 (April 21st, 2020):
+  * Improve Google Play compliance, remove too broad javascript interface functions.
+  * Depend on newer version of the play referrer library that doesn't require extra permissions. [See e.g. this stack overflow post](https://stackoverflow.com/questions/59369092/play-install-referrer-library-adding-write-external-storage-and-read-external-st)
+
 V15.11 (December 12th, 2019):
   * Remove ReferrerReceiver from the manifest as Google will stop broadcasting install referrers soon. [See our blogpost for more information](https://medium.com/appbrain/the-google-play-referrer-api-and-the-appbrain-sdk-38cfbaa350dc)
   * Stability improvements
