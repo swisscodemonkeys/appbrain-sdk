@@ -3,7 +3,7 @@
   <groupId>com.appbrain</groupId>
   <artifactId>appbrain-sdk</artifactId>
   <versioning>
-    <release>15.11</release>
+    <release>16.00</release>
     <versions>
       <version>12.00</version>
       <version>13.00</version>
@@ -22,7 +22,8 @@
       <version>15.00</version>
       <version>15.10</version>
       <version>15.11</version>
+      <version>16.00</version>
     </versions>
-    <lastUpdated>20191212122220</lastUpdated>
+    <lastUpdated>20200421045150</lastUpdated>
   </versioning>
 </metadata>
