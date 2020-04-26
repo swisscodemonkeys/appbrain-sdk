@@ -21,6 +21,9 @@ Recent changes
 
 Every release contains bugfixes and monetizations improvements.
 
+V16.01 (April 26th, 2020):
+  * Fix issue with manifest entry verification of `AppBrainJobService` on older Android SDK versions.
+
 V16.00 (April 21st, 2020):
   * Improve Google Play compliance, remove too broad javascript interface functions.
   * Depend on newer version of the play referrer library that doesn't require extra permissions. [See e.g. this stack overflow post](https://stackoverflow.com/questions/59369092/play-install-referrer-library-adding-write-external-storage-and-read-external-st)
@@ -66,24 +69,4 @@ V14.00 (January 9th, 2018):
 V13.30 (November 7th, 2017):
   * Added convenient onDoneCallback for InterstitialBuilder. [Documentation](https://www.appbrain.com/info/help/sdk/javadoc/InterstitialBuilder.html#com.appbrain.InterstitialBuilder.setOnDoneCallback(Runnable))
   * Speed optimizations, removed potential StrictMode warnings
-
-V13.22 (July 21th, 2017):
-  * Fixed proguard issue
-  * Fixed rare WebView instantiation issue
-  * Workaround for rare OkHttp IllegalStateException "cache is closed"
-
-V13.20 (July 3rd, 2017):
-  * Improved support for Unity. [Documentation](https://www.appbrain.com/info/help/sdk/unity.html)
-  * Automatic SDK initialization. (Calling AppBrain.init() is optional now).
-  * Android O compatibility fixes
-  * Removed RecyclerView-based ads
-
-V13.10 (April 5th, 2017):
-  * Added support for 11 more languages, bringing the total to 34.
-
-V13.00 (January 31st, 2017):
-  * Added preload() function to InterstitialBuilder. [Documentation](https://www.appbrain.com/info/help/sdk/javadoc/InterstitialBuilder.html)
-  * InterstitialLoader now has onAdLoaded and onAdFailedToLoad callbacks. [Documentation](https://www.appbrain.com/info/help/sdk/javadoc/InterstitialListener.html#com.appbrain.InterstitialListener)
-  * Supports mediation (contact us for details).
-  * Better timeouts for ad conversion rates.
 
