@@ -21,6 +21,10 @@ Recent changes
 
 Every release contains bugfixes and monetizations improvements.
 
+V16.10 (July 10th, 2020):
+  * Better instant apps support
+  * Performance improvements
+
 V16.03 (May 8th, 2020):
   * Fix issue with manifest entry verification of `AppBrainJobService` on older Android SDK versions.
   * Performance & size improvements
