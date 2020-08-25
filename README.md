@@ -21,6 +21,9 @@ Recent changes
 
 Every release contains bugfixes and monetizations improvements.
 
+V16.11 (August 25th, 2020):
+  * Performance improvement
+
 V16.10 (July 10th, 2020):
   * Better instant apps support
   * Performance improvements
@@ -70,8 +73,4 @@ V14.00 (January 9th, 2018):
   * Added remotely-controllable interstitials [Blogpost](https://medium.com/appbrain/appbrain-automatic-interstitials-easily-control-ad-placement-in-your-android-app-f6717dd08183)
   * Better protection against scammy ads
   * Speed and stability optimizations
-
-V13.30 (November 7th, 2017):
-  * Added convenient onDoneCallback for InterstitialBuilder. [Documentation](https://www.appbrain.com/info/help/sdk/javadoc/InterstitialBuilder.html#com.appbrain.InterstitialBuilder.setOnDoneCallback(Runnable))
-  * Speed optimizations, removed potential StrictMode warnings
 
