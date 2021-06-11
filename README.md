@@ -21,6 +21,11 @@ Recent changes
 
 Every release contains bugfixes and monetizations improvements.
 
+V16.20 (June 11th, 2021):
+  * Fix for launching with targetSdkVersion 30.
+  * Rotate banners with more appearances and colors.
+  * Automatically send conversion events for 5 minute and 1 hour activity in AppBrain analytics.
+
 V16.11 (August 25th, 2020):
   * Performance improvement
 
