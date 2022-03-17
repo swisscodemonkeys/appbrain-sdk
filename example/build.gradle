@@ -21,12 +21,12 @@ repositories {
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 31
     buildToolsVersion '28.0.3'
 
     defaultConfig {
         minSdkVersion 10
-        targetSdkVersion 28
+        targetSdkVersion 31
     }
     sourceSets {
         main {
@@ -63,6 +63,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard.cfg'
             signingConfig signingConfigs.release
         }
+    }
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
     }
 }
 

@@ -21,6 +21,10 @@ Recent changes
 
 Every release contains bugfixes and monetizations improvements.
 
+V17.00 (March 17th, 2022):
+  * Fix for launching with targetSdkVersion 31.
+  * Works better with play-services-ads 20+.
+
 V16.20 (June 11th, 2021):
   * Fix for launching with targetSdkVersion 30.
   * Rotate banners with more appearances and colors.
