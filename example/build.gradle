@@ -1,32 +1,31 @@
 buildscript {
     repositories {
         mavenCentral()
-	google()
-	jcenter()
+	    google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.6.0'
+        classpath 'com.android.tools.build:gradle:8.13.0'
     }
 }
 
 repositories {
     maven {
-        url 'http://swisscodemonkeys.github.io/appbrain-sdk/maven'
+        url 'https://swisscodemonkeys.github.io/appbrain-sdk/maven'
     }
     mavenCentral()
     google()
-    jcenter()
 }
 
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 31
-    buildToolsVersion '28.0.3'
+    namespace 'com.appbrain.example'
+    compileSdkVersion 35
+    buildToolsVersion '35.0.0'
 
     defaultConfig {
-        minSdkVersion 10
-        targetSdkVersion 31
+        minSdkVersion 23
+        targetSdkVersion 35
     }
     sourceSets {
         main {
