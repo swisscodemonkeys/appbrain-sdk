@@ -3,7 +3,7 @@ AppBrain SDK
 
 [![AppBrain SDK](https://www.appbrain.com/stats/libraries/shield/appbrain.svg)](https://www.appbrain.com/stats/libraries/details/appbrain/appbrain-sdk)
 
-This repository contains the AppBrain SDK and an example project how to use it. (The AppBrain SDK formerly was called "AppLift").
+This repository contains the AppBrain SDK and an example project how to use it.
 
 To learn more about our SDK, [visit our Android monetization SDK information page](https://www.appbrain.com/info/monetize). 
 

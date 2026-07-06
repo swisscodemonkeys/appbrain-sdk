@@ -49,7 +49,7 @@ public class BannerActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTitle("AppLift banner playground");
+        setTitle("AppBrain banner playground");
         LinearLayout mainLayout = new LinearLayout(this);
         mainLayout.setOrientation(LinearLayout.VERTICAL);
 
@@ -105,6 +105,7 @@ public class BannerActivity extends Activity {
         loadAd();
 
         setContentView(mainLayout);
+        EdgeToEdge.applySystemBarInsets(mainLayout);
 
         title.setOnItemSelectedListener(listener);
         button.setOnItemSelectedListener(listener);

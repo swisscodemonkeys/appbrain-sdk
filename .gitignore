@@ -10,3 +10,5 @@ R.java
 .gradle
 .idea
 local.properties
+*.hprof
+.kotlin

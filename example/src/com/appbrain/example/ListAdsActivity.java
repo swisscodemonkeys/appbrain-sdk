@@ -18,6 +18,7 @@ public class ListAdsActivity extends ListActivity {
         super.onCreate(savedInstanceState);
 
         ListView listView = getListView();
+        EdgeToEdge.applySystemBarInsets(listView);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
             android.R.layout.simple_list_item_1);

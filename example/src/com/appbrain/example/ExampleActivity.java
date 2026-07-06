@@ -36,6 +36,7 @@ public class ExampleActivity extends Activity {
             calendar.getTime()));
 
         setContentView(R.layout.main);
+        EdgeToEdge.applySystemBarInsets(findViewById(R.id.layout));
 
         final RemoteSettings settings = AppBrain.getSettings();
 
